@@ -1,0 +1,3 @@
+export const MEU_ACTION = {
+  GET_MENU_ACTION: "MEU_ACTION/GET_MENU_ACTION",
+};
