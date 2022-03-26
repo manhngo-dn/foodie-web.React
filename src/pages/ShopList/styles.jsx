@@ -97,3 +97,8 @@ export const ShopsKind = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
 `;
+
+export const Pagination = styled.div`
+  width: 100%;
+  padding-top: 20px;
+`;

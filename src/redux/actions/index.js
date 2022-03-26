@@ -7,3 +7,5 @@ export * from "./menu.action";
 export * from "./cart.action";
 export * from "./location.action";
 export * from "./purchase.action";
+export * from "./comment.action";
+export * from "./favorite.action";

@@ -96,29 +96,21 @@ const cartReducer = createReducer(initialState, {
     };
   },
 
-  //   [SUCCESS(CART_ACTION.ADD_TO_CART)]: (state, action) => {
-  //     const { data } = action.payload;
-  //     return {
-  //       ...state,
-  //       cartList: {
-  //         ...state.cartList,
-  //         data,
-  //         loading: false,
-  //         errors: null,
-  //       },
-  //     };
-  //   },
-  //   [FAIL(CART_ACTION.ADD_TO_CART)]: (state, action) => {
-  //     const { errors } = action.payload;
-  //     return {
-  //       ...state,
-  //       cartList: {
-  //         ...state.cartList,
-  //         loading: false,
-  //         errors,
-  //       },
-  //     };
-  //   },
+  [REQUEST(CART_ACTION.CLEAR_CART)]: (state, action) => {
+    const { shopId } = action.payload;
+
+    const newCartList = state.cartList.data.filter(
+      (product) => product.shopId !== shopId
+    );
+    localStorage.setItem("cartList", JSON.stringify(newCartList));
+    return {
+      ...state,
+      cartList: {
+        ...state.cartList,
+        data: newCartList,
+      },
+    };
+  },
 });
 
 export default cartReducer;

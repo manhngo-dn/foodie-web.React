@@ -10,6 +10,8 @@ import menuReducer from "./redux/reducers/menu.reducer";
 import cartReducer from "./redux/reducers/cart.reducer";
 import locationReducer from "./redux/reducers/location.reducer";
 import purchaseReducer from "./redux/reducers/purchase.reducer";
+import commentReducer from "./redux/reducers/comment.reducer";
+import favoriteReducer from "./redux/reducers/favorite.reducer";
 import rootSaga from "./redux/sagas";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -26,6 +28,8 @@ const store = configureStore({
     cartReducer,
     locationReducer,
     purchaseReducer,
+    commentReducer,
+    favoriteReducer,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({ thunk: false }),

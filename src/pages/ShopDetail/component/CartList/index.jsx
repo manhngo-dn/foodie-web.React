@@ -11,6 +11,7 @@ import {
   Modal,
   Badge,
   Radio,
+  Form,
 } from "antd";
 import {
   PlusSquareOutlined,
@@ -25,20 +26,25 @@ import { useParams, useNavigate } from "react-router-dom";
 import * as S from "./styles";
 import { SHIP_FEE } from "./constants";
 import { ROUTERS } from "../../../../constants/routers";
+import AddAndChangeLocation from "./components/AddAndChangeLocation";
 import {
   addToCartAction,
   reduceQuantityAction,
   removeFromCartAction,
   addPurchaseAction,
+  clearCartAction,
 } from "../../../../redux/actions";
 
 const CartList = () => {
   const [visiblePaymentModal, setVisiblePaymentModal] = useState(false);
   const [visibleLoginNoticeModal, setVisibleLoginNoticeModal] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("cash");
+  const [isHideAddLocation, setIsHideAddLocation] = useState(true);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [receiverInfoForm] = Form.useForm();
 
   const { id } = useParams();
   const { cartList } = useSelector((state) => state.cartReducer);
@@ -77,6 +83,10 @@ const CartList = () => {
     );
   };
 
+  const handleClearCart = () => {
+    dispatch(clearCartAction({ shopId: id }));
+  };
+
   const handleOrderButton = () => {
     if (cartListActive.length === 0) {
       const emptyCartNotice = (type) => {
@@ -95,29 +105,37 @@ const CartList = () => {
   };
 
   const handleFinishPayment = () => {
-    dispatch(
-      addPurchaseAction({
-        data: {
-          cartList: cartListActive,
-          paymentMethod,
-          userId: userInfo.data.id,
-          location: userInfo.data.location,
-          shipFee: SHIP_FEE,
-        },
-        callback: {
-          finishPayment: () => {
-            setVisiblePaymentModal(false);
-            cartListActive.forEach((product) => {
-              return dispatch(
-                removeFromCartAction({
-                  productId: product.productId,
-                })
-              );
-            });
+    if (
+      !receiverInfoForm.getFieldsValue().fullName ||
+      !receiverInfoForm.getFieldsValue().phoneNumber ||
+      !userInfo.data.location
+    ) {
+      return notification.error({
+        message: "Thông tin người nhận không hợp lệ",
+        description: "Vui lòng nhập đầy đủ thông tin",
+      });
+    } else {
+      dispatch(
+        addPurchaseAction({
+          data: {
+            cartList: cartListActive,
+            shopId: id,
+            paymentMethod,
+            userId: userInfo.data.id,
+            fullName: receiverInfoForm.getFieldsValue().fullName,
+            phoneNumber: receiverInfoForm.getFieldsValue().phoneNumber,
+            location: userInfo.data.location,
+            shipFee: SHIP_FEE,
           },
-        },
-      })
-    );
+          callback: {
+            finishPayment: () => {
+              setVisiblePaymentModal(false);
+              dispatch(clearCartAction({ shopId: id }));
+            },
+          },
+        })
+      );
+    }
   };
 
   const renderCartListActive = () => {
@@ -184,7 +202,17 @@ const CartList = () => {
 
   return (
     <S.CartListContainer>
-      <S.CartListHeading>Đơn hàng hiện tại của bạn</S.CartListHeading>
+      <Row justify="space-around" align="middle">
+        <Col>
+          <S.CartListHeading>Đơn hàng hiện tại</S.CartListHeading>
+        </Col>
+        <Col>
+          <Button danger size="small" onClick={() => handleClearCart()}>
+            Xóa toàn bộ
+          </Button>
+        </Col>
+      </Row>
+
       {renderCartListActive()}
       <S.CartListTotalPrice>
         <Row gutter={16} justify={"space-between"}>
@@ -204,9 +232,11 @@ const CartList = () => {
         title={<S.CartListHeading>Xác nhận đơn hàng </S.CartListHeading>}
         centered
         visible={visiblePaymentModal}
-        onOk={() => setVisiblePaymentModal(false)}
-        onCancel={() => setVisiblePaymentModal(false)}
-        width={900}
+        onCancel={() => {
+          setVisiblePaymentModal(false);
+          receiverInfoForm.resetFields();
+        }}
+        width={1000}
         footer={
           <Button
             type="primary"
@@ -219,48 +249,74 @@ const CartList = () => {
         }
       >
         <Row gutter={16}>
-          <Col span={12}>
+          <Col span={14}>
             <S.CartListHeading>Thông tin người đặt hàng</S.CartListHeading>
+            <Form
+              form={receiverInfoForm}
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 16 }}
+              initialValues={{
+                fullName: userInfo.data.fullName,
+                phoneNumber: userInfo.data.phoneNumber,
+              }}
+            >
+              <Form.Item
+                label="Họ và tên"
+                name="fullName"
+                rules={[{ required: true, message: "Vui lòng nhập họ và tên" }]}
+              >
+                <Input placeholder="Nhập họ và tên" />
+              </Form.Item>
+              <Form.Item
+                label="Số điện thoại"
+                name="phoneNumber"
+                rules={[
+                  { required: true, message: "Vui lòng nhập số điện thoại" },
+                ]}
+              >
+                <Input addonBefore="+84" placeholder="Nhập số điện thoại" />
+              </Form.Item>
+            </Form>
+
             <Row gutter={[16, 16]}>
               <Col span={8}>
-                <strong>Họ và tên:</strong>
-              </Col>
-              <Col span={16}>{userInfo.data.fullName}</Col>
-              <Col span={8}>
-                <strong>Số điện thoại:</strong>
-              </Col>
-              <Col span={16}>
-                {userInfo.data.phoneNumber
-                  ? `(+84) ${userInfo.data.phoneNumber}`
-                  : "Chưa cập nhật"}
+                <strong>Địa chỉ:</strong>
               </Col>
               {userInfo.data.location ? (
-                <>
-                  <Col span={8}>
-                    <strong>Địa chỉ</strong>
-                  </Col>
-                  <Col span={16}>
+                <Col span={16}>
+                  <p>
                     {userInfo.data.location.address},{" "}
                     {userInfo.data.location.ward.name},{" "}
                     {userInfo.data.location.district.name},{" "}
                     {userInfo.data.location.city.name}
-                  </Col>
-                </>
+                  </p>
+                  <Button
+                    hidden={!isHideAddLocation}
+                    onClick={() => setIsHideAddLocation(!isHideAddLocation)}
+                  >
+                    Thay đổi địa chỉ
+                  </Button>
+                </Col>
               ) : (
-                <>
-                  <Col span={24}>
-                    <strong>Bạn chưa có thông tin địa chỉ giao hàng</strong>
-                  </Col>
+                <Col span={16}>
                   <Button
                     type="default"
                     icon={<PlusOutlined />}
                     block
-                    onClick={() => {}}
+                    onClick={() => setIsHideAddLocation(!isHideAddLocation)}
+                    hidden={!isHideAddLocation}
                   >
                     Thêm địa chỉ
                   </Button>
-                </>
+                </Col>
               )}
+              <Col offset={8} span={16}>
+                <div hidden={isHideAddLocation}>
+                  <AddAndChangeLocation
+                    setIsHideAddLocation={setIsHideAddLocation}
+                  />
+                </div>
+              </Col>
               <Col span={8}>
                 <strong>Hình thức thanh toán:</strong>
               </Col>
@@ -285,7 +341,7 @@ const CartList = () => {
               </Col>
             </Row>
           </Col>
-          <Col span={12}>
+          <Col span={10}>
             <S.CartListHeading>Chi tiết đơn hàng</S.CartListHeading>
 
             {renderCartListPayment()}
@@ -306,7 +362,7 @@ const CartList = () => {
             </S.PaymentTotalPrice>
             <Row gutter={16} justify={"space-between"}>
               <Col>
-                <S.PaymentPriceTex>TỔNG CỘNG</S.PaymentPriceTex>
+                <S.PaymentPriceText>TỔNG CỘNG</S.PaymentPriceText>
               </Col>
               <Col>
                 <S.PaymentPriceNumber>

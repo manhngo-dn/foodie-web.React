@@ -16,6 +16,7 @@ import { ROUTERS } from "../../constants/routers";
 import ChangeUserInfoTab from "./components/ChangeUserInfoTab";
 import ChangePasswordTab from "./components/ChangePasswordTab";
 import ChangeLocationTab from "./components/ChangeLocationTab";
+import PurchaseHistoryTab from "./components/PurchaseHistoryTab";
 
 const UserInfoPage = () => {
   const [activeKey, setActiveKey] = useState("1");
@@ -85,7 +86,7 @@ const UserInfoPage = () => {
           }
           key="4"
         >
-          Content of Tab 2
+          <PurchaseHistoryTab activeKey />
         </Tabs.TabPane>
       </Tabs>
     </S.Wrapper>

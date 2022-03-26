@@ -7,6 +7,12 @@ const initialState = {
     loading: false,
     errors: null,
   },
+  purchaseList: {
+    data: [],
+    meta: {},
+    loading: false,
+    errors: null,
+  },
 };
 
 const purchaseReducer = createReducer(initialState, {
@@ -35,6 +41,40 @@ const purchaseReducer = createReducer(initialState, {
       ...state,
       purchaseStatus: {
         ...state.purchaseStatus,
+        loading: false,
+        errors,
+      },
+    };
+  },
+
+  [REQUEST(PURCHASE_ACTION.GET_PURCHASE_LIST)]: (state, action) => {
+    return {
+      ...state,
+      purchaseList: {
+        ...state.purchaseList,
+        loading: true,
+      },
+    };
+  },
+  [SUCCESS(PURCHASE_ACTION.GET_PURCHASE_LIST)]: (state, action) => {
+    const { data, meta } = action.payload;
+    return {
+      ...state,
+      purchaseList: {
+        ...state.purchaseList,
+        data,
+        meta,
+        loading: false,
+        errors: null,
+      },
+    };
+  },
+  [FAIL(PURCHASE_ACTION.GET_PURCHASE_LIST)]: (state, action) => {
+    const { errors } = action.payload;
+    return {
+      ...state,
+      purchaseList: {
+        ...state.purchaseList,
         loading: false,
         errors,
       },

@@ -1,27 +1,62 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { Row, Col, Image, Skeleton, Anchor, Space, Button, Modal } from "antd";
-import { CommentOutlined } from "@ant-design/icons";
+import {
+  Row,
+  Col,
+  Image,
+  Skeleton,
+  Anchor,
+  Space,
+  Button,
+  Modal,
+  Form,
+  Input,
+  Rate,
+  notification,
+} from "antd";
+import {
+  CommentOutlined,
+  UserOutlined,
+  HeartOutlined,
+} from "@ant-design/icons";
+import { FaHeart } from "react-icons/fa";
+import moment from "moment";
 
 import {
   getShopDetailAction,
   getProductDetailAction,
   getMenuAction,
+  getCommentListAction,
+  sendCommentAction,
+  addToFavoriteAction,
+  removeFromFavoriteAction,
 } from "../../redux/actions";
 import ProductItem from "./component/ProductItem";
 import CartList from "./component/CartList";
-import CommentsModal from "./component/CommentsModal";
 import * as S from "./styles";
 
 const ShopDetail = () => {
   const dispatch = useDispatch();
+
   const { id } = useParams();
   const [isCommentModalShow, setIsCommentModalShow] = useState(false);
+  const [rateValue, setRateValue] = useState(0);
+  const [commentForm] = Form.useForm();
 
   const { shopDetail } = useSelector((state) => state.shopDetailReducer);
   const { productList } = useSelector((state) => state.productReducer);
   const { menuList } = useSelector((state) => state.menuReducer);
+  const { commentList, sendCommentData } = useSelector(
+    (state) => state.commentReducer
+  );
+  const { userInfo } = useSelector((state) => state.userReducer);
+  const { favoriteList } = useSelector((state) => state.favoriteReducer);
+
+  let totalRate = 0;
+  commentList.data.forEach((item) => {
+    totalRate += item.rate;
+  });
 
   useEffect(() => {
     dispatch(
@@ -31,6 +66,7 @@ const ShopDetail = () => {
     );
     dispatch(getProductDetailAction({ id }));
     dispatch(getMenuAction({ id }));
+    dispatch(getCommentListAction({ shopId: id }));
   }, []);
 
   const { Link } = Anchor;
@@ -67,6 +103,100 @@ const ShopDetail = () => {
     });
   };
 
+  const handleComment = (values) => {
+    dispatch(
+      sendCommentAction({
+        ...values,
+        rate: rateValue,
+        shopId: id,
+        userId: userInfo.data.id,
+      })
+    );
+    commentForm.resetFields();
+    setRateValue(0);
+    notification.success({
+      message: "Gửi bình luận thành công",
+    });
+  };
+
+  const handleAddToFavoriteButton = () => {
+    dispatch(
+      addToFavoriteAction({
+        shopId: parseFloat(id),
+        userId: userInfo.data.id,
+      })
+    );
+  };
+
+  const handleRemoveFromFavoriteButton = (userFavoriteId) => {
+    dispatch(
+      removeFromFavoriteAction({
+        userFavoriteId,
+        shopId: parseFloat(id),
+      })
+    );
+
+    console.log(userFavoriteId);
+  };
+
+  const renderCommentList = () => {
+    return commentList.data.map((commentItem, commentIndex) => {
+      return (
+        <S.CommentContainer key={commentItem.id}>
+          <Space align="baseline" size="large">
+            <S.UserNameComment>
+              <UserOutlined /> {commentItem.user?.fullName}
+            </S.UserNameComment>
+            <S.CommentTime>
+              {moment(commentItem.createdAt).fromNow()}
+            </S.CommentTime>
+          </Space>
+          <div>
+            <Rate disabled value={commentItem.rate} allowHalf />
+          </div>
+
+          <S.CommentContent>{commentItem.content}</S.CommentContent>
+        </S.CommentContainer>
+      );
+    });
+  };
+
+  const renderFavoriteButton = () => {
+    const favoriteIndex = shopDetail.data.favorites?.findIndex(
+      (item) => item.userId === userInfo.data.id
+    );
+
+    const userFavoriteId = shopDetail.data.favorites?.[favoriteIndex]?.id;
+
+    if (favoriteIndex !== -1) {
+      return (
+        <Button
+          type="default"
+          onClick={() => handleRemoveFromFavoriteButton(userFavoriteId)}
+        >
+          <HeartOutlined
+            style={{
+              color: "#ee4d2d",
+            }}
+          />
+          Đã yêu thích
+        </Button>
+      );
+    } else {
+      return (
+        <Button
+          type="default"
+          onClick={() => {
+            handleAddToFavoriteButton();
+          }}
+        >
+          <HeartOutlined />
+          Thêm vào yêu thích
+        </Button>
+      );
+    }
+  };
+
   return (
     <>
       {shopDetail.loading ? (
@@ -85,16 +215,30 @@ const ShopDetail = () => {
               </Col>
               <Col flex="auto">
                 <S.ShopDetailInfo>
-                  <Space direction="vertical" size="large">
+                  <Space direction="vertical">
                     <S.ShopName>{shopDetail.data.name}</S.ShopName>
-                    <S.ShopKind>{shopDetail.data.kind}</S.ShopKind>
-                    {/* <S.Breadcrumb>Breadcrumb</S.Breadcrumb> */}
+                    <div>
+                      <Rate
+                        disabled
+                        style={{ color: "#ee4d2d" }}
+                        value={
+                          commentList.data.length
+                            ? totalRate / commentList.data.length
+                            : 0
+                        }
+                      />
+                      <S.favorites>
+                        {`${shopDetail.data.favorites?.length} người đã thích`}
+                      </S.favorites>
+                    </div>
 
+                    <S.ShopKind>{shopDetail.data.kind}</S.ShopKind>
                     <S.ShopAddress>{shopDetail.data.address}</S.ShopAddress>
                     <S.ShopActiveTime>
                       {shopDetail.data.openTime} - {shopDetail.data.closeTime}
                     </S.ShopActiveTime>
-                    <div>
+                    <Space>
+                      {renderFavoriteButton()}
                       <Button
                         type="default"
                         icon={<CommentOutlined />}
@@ -102,7 +246,7 @@ const ShopDetail = () => {
                       >
                         Bình luận
                       </Button>
-                    </div>
+                    </Space>
                   </Space>
                 </S.ShopDetailInfo>
               </Col>
@@ -129,12 +273,41 @@ const ShopDetail = () => {
 
           <Modal
             title="Viết bình luận"
-            width={900}
+            width={500}
             visible={isCommentModalShow}
-            onOk={() => setIsCommentModalShow(false)}
             onCancel={() => setIsCommentModalShow(false)}
+            bodyStyle={{ maxHeight: "400px", overflowX: "scroll" }}
+            footer={
+              <Form
+                form={commentForm}
+                layout="horizontal"
+                onFinish={(values) => handleComment(values)}
+              >
+                <Form.Item label="Đánh giá">
+                  <S.Rate>
+                    <Rate
+                      allowHalf
+                      value={rateValue}
+                      onChange={(value) => setRateValue(value)}
+                    />
+                  </S.Rate>
+                </Form.Item>
+                <Form.Item label="Nội dung" name="content">
+                  <Input.TextArea autoSize={{ minRows: 2, maxRows: 6 }} />
+                </Form.Item>
+                {sendCommentData.loading ? (
+                  <Button type="primary" htmlType="submit" loading>
+                    Đang Gửi
+                  </Button>
+                ) : (
+                  <Button type="primary" htmlType="submit">
+                    Gửi
+                  </Button>
+                )}
+              </Form>
+            }
           >
-            <CommentsModal />
+            {renderCommentList()}
           </Modal>
         </S.Container>
       )}

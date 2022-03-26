@@ -1,3 +1,4 @@
 export const PAGING = {
   PRODUCT_LIST: 4,
+  PURCHASE_HISTORY_LIST: 5,
 };

@@ -29,6 +29,47 @@ function* addPurchaseSaga(action) {
   }
 }
 
+function* getPurchaseListSaga(action) {
+  try {
+    const { userId, page, limit } = action.payload;
+    const result = yield axios.get(`http://localhost:4000/purchases`, {
+      params: {
+        userId,
+        _expand: "shop",
+        _page: page,
+        _limit: limit,
+        _sort: "id",
+        _order: "desc",
+      },
+    });
+
+    yield put({
+      type: SUCCESS(PURCHASE_ACTION.GET_PURCHASE_LIST),
+      payload: {
+        data: result.data,
+        meta: {
+          page,
+          limit,
+          total: result.headers["x-total-count"],
+        },
+        loading: false,
+      },
+    });
+  } catch (error) {
+    yield put({
+      type: FAIL(PURCHASE_ACTION.GET_PURCHASE_LIST),
+      payload: {
+        loading: false,
+        errors: "Lấy dữ liệu lỗi",
+      },
+    });
+  }
+}
+
 export default function* purchaseSaga() {
   yield takeEvery(REQUEST(PURCHASE_ACTION.ADD_PURCHASE), addPurchaseSaga);
+  yield takeEvery(
+    REQUEST(PURCHASE_ACTION.GET_PURCHASE_LIST),
+    getPurchaseListSaga
+  );
 }

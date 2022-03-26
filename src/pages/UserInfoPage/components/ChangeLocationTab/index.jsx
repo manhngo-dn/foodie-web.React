@@ -126,7 +126,7 @@ const ChangeLocationTab = (activeKey) => {
         wrapperCol={{ span: 12 }}
         name="basic"
         initialValues={{ remember: true }}
-        onFinish={(values, city, district) => handleChangeLocation(values)}
+        onFinish={(values) => handleChangeLocation(values)}
       >
         <Form.Item
           label="Tỉnh/Thành phố"

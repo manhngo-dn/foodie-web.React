@@ -63,7 +63,7 @@ export const TotalPrice = styled.div`
   font-weight: 700;
 `;
 
-export const PaymentPriceTex = styled.div`
+export const PaymentPriceText = styled.div`
   font-size: 18px;
   color: #0288d1;
   font-weight: 700;

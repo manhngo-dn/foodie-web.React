@@ -8,3 +8,5 @@ export * from "./menu.constant";
 export * from "./cart.constant";
 export * from "./location.constant";
 export * from "./purchase.constant";
+export * from "./comment.constant";
+export * from "./favorite.constant";

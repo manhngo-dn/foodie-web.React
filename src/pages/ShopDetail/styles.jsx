@@ -20,13 +20,6 @@ export const ShopImage = styled.img`
   height: 300px;
 `;
 
-export const Breadcrumb = styled.div`
-  font-size: 11px;
-  color: #0288d1;
-
-  padding-bottom: 10px;
-`;
-
 export const ShopKind = styled.div`
   font-size: 14px;
   color: #959595;
@@ -40,17 +33,14 @@ export const ShopName = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 5px;
 `;
 
 export const ShopAddress = styled.div`
   font-size: 14px;
-  padding-bottom: 5px;
 `;
 
 export const ShopActiveTime = styled.div`
   font-size: 16px;
-  vertical-align: middle;
 `;
 
 export const MenuTab = styled.div`
@@ -174,4 +164,34 @@ export const BillContainer = styled.div`
   border: 1px solid #ebebeb;
   position: sticky;
   top: 70px;
+`;
+
+export const CommentContainer = styled.div`
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 10px;
+`;
+
+export const UserNameComment = styled.div`
+  font-size: 16px;
+  font-weight: 700;
+`;
+
+export const CommentTime = styled.div`
+  font-size: 12px;
+  color: #959595;
+`;
+
+export const CommentContent = styled.div`
+  font-size: 14px;
+`;
+
+export const Rate = styled.div`
+  text-align: start;
+`;
+
+export const favorites = styled.span`
+  font-size: 16px;
+  color: #ee4d2d;
 `;

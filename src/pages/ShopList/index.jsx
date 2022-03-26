@@ -238,15 +238,17 @@ const ShopList = () => {
     if (shopList.loading) return <Skeleton />;
     if (shopList.data.length === 0) return <></>;
     return (
-      <Row justify="center">
-        <Pagination
-          current={currentPage}
-          pageSize={PAGING.PRODUCT_LIST}
-          total={parseInt(shopList.meta.total)}
-          showSizeChanger={false}
-          onChange={(page) => handleChangePage(page)}
-        />
-      </Row>
+      <S.Pagination>
+        <Row justify="center">
+          <Pagination
+            current={currentPage}
+            pageSize={PAGING.PRODUCT_LIST}
+            total={parseInt(shopList.meta.total)}
+            showSizeChanger={false}
+            onChange={(page) => handleChangePage(page)}
+          />
+        </Row>
+      </S.Pagination>
     );
   };
 

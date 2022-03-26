@@ -9,3 +9,5 @@ export const reduceQuantityAction = createAction(
 export const removeFromCartAction = createAction(
   REQUEST(CART_ACTION.REMOVE_FROM_CART)
 );
+
+export const clearCartAction = createAction(REQUEST(CART_ACTION.CLEAR_CART));
