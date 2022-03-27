@@ -128,15 +128,15 @@ const ShopDetail = () => {
     );
   };
 
-  const handleRemoveFromFavoriteButton = (userFavoriteId) => {
+  const handleRemoveFromFavoriteButton = (favoriteId) => {
     dispatch(
       removeFromFavoriteAction({
-        userFavoriteId,
+        favoriteId,
         shopId: parseFloat(id),
       })
     );
 
-    console.log(userFavoriteId);
+    console.log(favoriteId);
   };
 
   const renderCommentList = () => {
@@ -166,13 +166,13 @@ const ShopDetail = () => {
       (item) => item.userId === userInfo.data.id
     );
 
-    const userFavoriteId = shopDetail.data.favorites?.[favoriteIndex]?.id;
+    const favoriteId = shopDetail.data.favorites?.[favoriteIndex]?.id;
 
     if (favoriteIndex !== -1) {
       return (
         <Button
           type="default"
-          onClick={() => handleRemoveFromFavoriteButton(userFavoriteId)}
+          onClick={() => handleRemoveFromFavoriteButton(favoriteId)}
         >
           <HeartOutlined
             style={{

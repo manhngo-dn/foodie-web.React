@@ -29,9 +29,9 @@ function* addToFavoriteSaga(action) {
 }
 
 function* removeFromFavoriteSaga(action) {
-  const { shopId, userFavoriteId } = action.payload;
+  const { shopId, favoriteId } = action.payload;
   try {
-    yield axios.delete(`http://localhost:4000/favorites/${action.payload}`);
+    yield axios.delete(`http://localhost:4000/favorites/${favoriteId}`);
 
     yield put({
       type: REQUEST(SHOP_DETAIL_ACTION.GET_SHOP_DETAIL),
