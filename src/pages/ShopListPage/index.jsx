@@ -13,7 +13,7 @@ import {
   Button,
 } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useLocation, Navigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   SearchOutlined,
   CaretDownOutlined,

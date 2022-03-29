@@ -216,7 +216,9 @@ const ShopDetail = () => {
               <Col flex="auto">
                 <S.ShopDetailInfo>
                   <Space direction="vertical">
-                    <S.ShopName>{shopDetail.data.name}</S.ShopName>
+                    <S.ShopName title={shopDetail.data.name}>
+                      {shopDetail.data.name}
+                    </S.ShopName>
                     <div>
                       <Rate
                         disabled
