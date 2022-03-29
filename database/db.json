@@ -1,4 +1,16 @@
 {
+  "tops": [
+    {
+      "id": 1,
+      "title": "Quán nổi bật"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Quán mới"
+    }
+  ],
   "services": [
     {
       "id": 1,
@@ -206,180 +218,306 @@
   "shops": [
     {
       "id": 1,
-      "name": "Restaurant 1, Branch 1, Shop 1, Floor 1, Table 1, Seat 1",
-      "kind": "Cafe",
-      "address": "Address 1, street 1, District 1, City 1",
-      "openTime": "10:00",
-      "closeTime": "22:00",
+      "name": "Cơm Gà Nam Chợ Mới - Hoàng Diệu",
+      "kind": "QUÁN ĂN, GIAO CƠM VĂN PHÒNG",
+      "address": "589 Hoàng Diệu, P. Hòa Thuận Đông, Quận Hải Châu, Đà Nẵng",
+      "openTime": "06:00",
+      "closeTime": "21:30",
       "categoryId": 1,
       "serviceId": 1,
-      "image": "https://images.foody.vn/res/g99/989671/prof/s640x400/foody-upload-api-foody-mobile-seatalk_img_15888236-200507105720.jpg",
-      "menuId": [1, 2, 3]
+      "image": "https://images.foody.vn/res/g28/277130/prof/s640x400/foody-upload-api-foody-mobile-5-201006112619.jpg",
+      "topId": 1,
+      "newsId": 1
     },
     {
       "id": 2,
-      "name": "Restaurant 2",
-      "address": "Address 2",
-      "openTime": "10:00",
+      "name": "Bún Đậu Mắm Tôm Phất Lộc 1 - Trần Phước Thành",
+      "kind": "QUÁN ĂN",
+      "address": "23 Trần Phước Thành, Quận Cẩm Lệ, Đà Nẵng",
+      "openTime": "09:30",
       "closeTime": "22:00",
-      "categoryId": 2,
+      "categoryId": 1,
       "serviceId": 1,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Menu 1",
-          "productId": [10, 11, 12]
-        },
-        {
-          "id": 2,
-          "name": "Menu 2",
-          "productId": [13, 14, 15]
-        },
-        {
-          "id": 3,
-          "name": "Menu 3",
-          "productId": [16, 17, 18]
-        }
-      ]
+      "image": "https://images.foody.vn/res/g90/892174/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200622160241.jpg",
+      "topId": 1,
+      "newsId": 1
     },
     {
       "id": 3,
-      "name": "Restaurant 3",
-      "address": "Address 3",
-      "openTime": "10:00",
-      "closeTime": "22:00",
-      "categoryId": 3,
+      "name": "Cơm Gà Nam Chợ Mới - Hoàng Diệu",
+      "kind": "QUÁN ĂN, GIAO CƠM VĂN PHÒNG",
+      "address": "589 Hoàng Diệu, P. Hòa Thuận Đông, Quận Hải Châu, Đà Nẵng",
+      "openTime": "06:00",
+      "closeTime": "21:30",
+      "categoryId": 1,
       "serviceId": 1,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Menu 1",
-          "productId": [19, 20, 21]
-        },
-        {
-          "id": 2,
-          "name": "Menu 2",
-          "productId": [22, 23, 24]
-        },
-        {
-          "id": 3,
-          "name": "Menu 3",
-          "productId": [25, 26, 27]
-        }
-      ]
+      "image": "https://images.foody.vn/res/g28/277130/prof/s640x400/foody-upload-api-foody-mobile-5-201006112619.jpg"
     },
     {
       "id": 4,
-      "name": "Restaurant 4",
-      "address": "Address 1",
-      "openTime": "10:00",
+      "name": "Bún Đậu Mắm Tôm Phất Lộc 1 - Trần Phước Thành",
+      "kind": "QUÁN ĂN",
+      "address": "23 Trần Phước Thành, Quận Cẩm Lệ, Đà Nẵng",
+      "openTime": "09:30",
       "closeTime": "22:00",
-      "categoryId": 5,
+      "categoryId": 1,
       "serviceId": 1,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Menu 1",
-          "productId": [28, 29, 30]
-        },
-        {
-          "id": 2,
-          "name": "Menu 2",
-          "productId": [31, 32, 33]
-        },
-        {
-          "id": 3,
-          "name": "Menu 3",
-          "productId": [34, 35, 36]
-        }
-      ]
+      "image": "https://images.foody.vn/res/g90/892174/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200622160241.jpg"
     },
     {
       "id": 5,
-      "name": "Restaurant 5",
-      "address": "Address 1",
-      "openTime": "10:00",
-      "closeTime": "22:00",
-      "categoryId": 6,
+      "name": "Cơm Gà Nam Chợ Mới - Hoàng Diệu",
+      "kind": "QUÁN ĂN, GIAO CƠM VĂN PHÒNG",
+      "address": "589 Hoàng Diệu, P. Hòa Thuận Đông, Quận Hải Châu, Đà Nẵng",
+      "openTime": "06:00",
+      "closeTime": "21:30",
+      "categoryId": 1,
       "serviceId": 1,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Menu 1",
-          "productId": [37, 38, 39]
-        },
-        {
-          "id": 2,
-          "name": "Menu 2",
-          "productId": [40, 41, 42]
-        },
-        {
-          "id": 3,
-          "name": "Menu 3",
-          "productId": [43, 44, 45]
-        }
-      ]
+      "image": "https://images.foody.vn/res/g28/277130/prof/s640x400/foody-upload-api-foody-mobile-5-201006112619.jpg"
     },
     {
       "id": 6,
-      "name": "Restaurant 6",
-      "address": "Address 1",
-      "openTime": "10:00",
+      "name": "Bún Đậu Mắm Tôm Phất Lộc 1 - Trần Phước Thành",
+      "kind": "QUÁN ĂN",
+      "address": "23 Trần Phước Thành, Quận Cẩm Lệ, Đà Nẵng",
+      "openTime": "09:30",
       "closeTime": "22:00",
-      "categoryId": 15,
-      "serviceId": 2,
-      "menu": [
-        {
-          "id": 1,
-          "name": "Menu 1",
-          "productId": [46, 47, 48]
-        },
-        {
-          "id": 2,
-          "name": "Menu 2"
-        }
-      ]
+      "categoryId": 1,
+      "serviceId": 1,
+      "image": "https://images.foody.vn/res/g90/892174/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200622160241.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Cơm Gà Nam Chợ Mới - Hoàng Diệu",
+      "kind": "QUÁN ĂN, GIAO CƠM VĂN PHÒNG",
+      "address": "589 Hoàng Diệu, P. Hòa Thuận Đông, Quận Hải Châu, Đà Nẵng",
+      "openTime": "06:00",
+      "closeTime": "21:30",
+      "categoryId": 1,
+      "serviceId": 1,
+      "image": "https://images.foody.vn/res/g28/277130/prof/s640x400/foody-upload-api-foody-mobile-5-201006112619.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Bún Đậu Mắm Tôm Phất Lộc 1 - Trần Phước Thành",
+      "kind": "QUÁN ĂN",
+      "address": "23 Trần Phước Thành, Quận Cẩm Lệ, Đà Nẵng",
+      "openTime": "09:30",
+      "closeTime": "22:00",
+      "categoryId": 1,
+      "serviceId": 1,
+      "image": "https://images.foody.vn/res/g90/892174/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200622160241.jpg"
     }
   ],
   "favorites": [
     {
       "shopId": 1,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "shopId": 1,
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "shopId": 1,
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "shopId": 1,
       "userId": 1,
-      "createdAt": 1648294697438,
-      "updatedAt": 1648294697439,
+      "createdAt": 1648546313032,
+      "updatedAt": 1648546313032,
       "id": 5
     }
   ],
   "menus": [
     {
       "id": 1,
-      "name": "Menu 1",
+      "name": "CƠM (BẮT ĐẦU BÁN 10H)",
       "shopId": 1
     },
     {
       "id": 2,
-      "name": "Menu 2",
+      "name": "NƯỚC UỐNG",
       "shopId": 1
     },
     {
       "id": 3,
-      "name": "Menu 3",
+      "name": "MỲ MIẾN",
       "shopId": 1
+    },
+    {
+      "id": 4,
+      "name": "COMBO CƠM + COCA",
+      "shopId": 1
+    },
+    {
+      "id": 5,
+      "name": "BÚN ĐẬU MẮM TÔM",
+      "shopId": 2
+    },
+    {
+      "id": 6,
+      "name": "ĂN THÊM",
+      "shopId": 2
+    },
+    {
+      "id": 7,
+      "name": "ĐỒ UỐNG",
+      "shopId": 2
+    },
+    {
+      "id": 8,
+      "name": "ĂN VẶT",
+      "shopId": 2
+    },
+    {
+      "id": 9,
+      "name": "COMBO",
+      "shopId": 2
+    },
+    {
+      "id": 10,
+      "name": "ĂN CHƠI",
+      "shopId": 2
+    },
+    {
+      "id": 11,
+      "name": "CƠM (BẮT ĐẦU BÁN 10H)",
+      "shopId": 3
+    },
+    {
+      "id": 12,
+      "name": "NƯỚC UỐNG",
+      "shopId": 3
+    },
+    {
+      "id": 13,
+      "name": "MỲ MIẾN",
+      "shopId": 3
+    },
+    {
+      "id": 14,
+      "name": "COMBO CƠM + COCA",
+      "shopId": 3
+    },
+    {
+      "id": 15,
+      "name": "BÚN ĐẬU MẮM TÔM",
+      "shopId": 4
+    },
+    {
+      "id": 16,
+      "name": "ĂN THÊM",
+      "shopId": 4
+    },
+    {
+      "id": 17,
+      "name": "ĐỒ UỐNG",
+      "shopId": 4
+    },
+    {
+      "id": 18,
+      "name": "ĂN VẶT",
+      "shopId": 4
+    },
+    {
+      "id": 19,
+      "name": "COMBO",
+      "shopId": 4
+    },
+    {
+      "id": 20,
+      "name": "ĂN CHƠI",
+      "shopId": 4
+    },
+    {
+      "id": 21,
+      "name": "CƠM (BẮT ĐẦU BÁN 10H)",
+      "shopId": 5
+    },
+    {
+      "id": 22,
+      "name": "NƯỚC UỐNG",
+      "shopId": 5
+    },
+    {
+      "id": 23,
+      "name": "MỲ MIẾN",
+      "shopId": 5
+    },
+    {
+      "id": 24,
+      "name": "COMBO CƠM + COCA",
+      "shopId": 5
+    },
+    {
+      "id": 25,
+      "name": "BÚN ĐẬU MẮM TÔM",
+      "shopId": 6
+    },
+    {
+      "id": 26,
+      "name": "ĂN THÊM",
+      "shopId": 6
+    },
+    {
+      "id": 27,
+      "name": "ĐỒ UỐNG",
+      "shopId": 6
+    },
+    {
+      "id": 28,
+      "name": "ĂN VẶT",
+      "shopId": 6
+    },
+    {
+      "id": 29,
+      "name": "COMBO",
+      "shopId": 6
+    },
+    {
+      "id": 30,
+      "name": "ĂN CHƠI",
+      "shopId": 6
+    },
+    {
+      "id": 31,
+      "name": "CƠM (BẮT ĐẦU BÁN 10H)",
+      "shopId": 7
+    },
+    {
+      "id": 32,
+      "name": "NƯỚC UỐNG",
+      "shopId": 7
+    },
+    {
+      "id": 33,
+      "name": "MỲ MIẾN",
+      "shopId": 7
+    },
+    {
+      "id": 34,
+      "name": "COMBO CƠM + COCA",
+      "shopId": 7
+    },
+    {
+      "id": 35,
+      "name": "BÚN ĐẬU MẮM TÔM",
+      "shopId": 8
+    },
+    {
+      "id": 36,
+      "name": "ĂN THÊM",
+      "shopId": 8
+    },
+    {
+      "id": 37,
+      "name": "ĐỒ UỐNG",
+      "shopId": 8
+    },
+    {
+      "id": 38,
+      "name": "ĂN VẶT",
+      "shopId": 8
+    },
+    {
+      "id": 39,
+      "name": "COMBO",
+      "shopId": 8
+    },
+    {
+      "id": 40,
+      "name": "ĂN CHƠI",
+      "shopId": 8
     }
   ],
   "users": [
@@ -480,91 +618,1884 @@
   "products": [
     {
       "id": 1,
-      "name": "Food 1",
-      "description": "Description 1",
-      "initialPrice": 100,
-      "currentPrice": 100,
-      "image": "food1.jpg",
-      "max": 10,
+      "name": "Cơm gà xé",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/cfbc7b9a-0958-4ade-9d04-d36fb081f45e.jpg",
+      "max": 30,
       "shopId": 1,
       "menuId": 1
     },
     {
       "id": 2,
-      "name": "Food 2",
-      "description": "Description 2",
-      "initialPrice": 200,
-      "currentPrice": 20,
-      "image": "food2.jpg",
+      "name": "Cơm ba chỉ giòn da",
+      "description": " ",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/6e61e10b-1071-4dab-bc61-397dbe663887.jpg",
       "max": 20,
       "shopId": 1,
       "menuId": 1
     },
     {
       "id": 3,
-      "name": "Food 3",
-      "description": "Description 3",
-      "initialPrice": 300,
-      "currentPrice": 30,
-      "image": "food3.jpg",
+      "name": "Cơm thịt xíu",
+      "description": " ",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/2660446e-c65e-4f52-a976-197abc00fa86.jpg",
       "max": 30,
       "shopId": 1,
       "menuId": 1
     },
     {
       "id": 4,
-      "name": "Food 4",
-      "description": "Description 4",
-      "initialPrice": 400000,
-      "currentPrice": 4000,
-      "image": "food4.jpg",
+      "name": "Cơm sườn nướng",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a417c672-5c74-4cf4-9ffd-4867e980-b8b7ee91-210304131548.jpeg",
       "max": 0,
       "shopId": 1,
-      "menuId": 2
+      "menuId": 1
     },
     {
       "id": 5,
-      "name": "Food 5",
-      "description": "Description 5",
-      "initialPrice": 500,
-      "currentPrice": 50,
-      "image": "food5.jpg",
+      "name": "Cơm thêm",
+      "description": " ",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/184c7e43-4df6-4a9c-afbd-aae53f7b5a99.jpg",
       "max": 50,
       "shopId": 1,
-      "menuId": 2
+      "menuId": 1
     },
     {
       "id": 6,
-      "name": "Food 6",
-      "description": "Description 6",
-      "initialPrice": 600,
-      "currentPrice": 60,
-      "image": "food6.jpg",
+      "name": "Cơm gà xối mỡ",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4476c627-2d7d-45fb-be2f-a94b2ee0-538dd1e0-201216184616.jpeg",
       "max": 60,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 7,
+      "name": "Cơm dương châu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e92c4637-0b79-43e6-802e-ef12bfa4db21.jpg",
+      "max": 70,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 8,
+      "name": "Cơm bò xào",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 9,
+      "name": "Cơm gà chiên mắm",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 10,
+      "name": "Cơm gà quay",
+      "description": "",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/56257b97-d8e2-4fd5-bb92-4ce60e6ee50c.jpg",
+      "max": 80,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 11,
+      "name": "Cơm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a65fa0ce-1a29-4fa7-812d-35be0afeba97.jpg",
+      "max": 80,
+      "shopId": 1,
+      "menuId": 1
+    },
+    {
+      "id": 12,
+      "name": "Coca",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a3349165-ac5a-4422-b1ee-9d0300a8c4a2.jpg",
+      "max": 200,
       "shopId": 1,
       "menuId": 2
     },
     {
-      "id": 7,
-      "name": "Food 7",
-      "description": "Description 7",
-      "initialPrice": 700,
-      "currentPrice": 70,
-      "image": "food7.jpg",
-      "max": 70,
+      "id": 13,
+      "name": "Sprite",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/ff1cc9a0-251e-499d-8d9d-48b567802be4.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 2
+    },
+    {
+      "id": 14,
+      "name": "Nước Suối",
+      "description": "",
+      "initialPrice": 7000,
+      "currentPrice": 7000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/27b1b13e-369e-4d92-9b72-3b3e6675c891.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 2
+    },
+    {
+      "id": 15,
+      "name": "Aquarius",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/48cc1a1f-958c-4c8d-9d56-06be330daca7.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 2
+    },
+    {
+      "id": 16,
+      "name": "Mỳ Xíu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/bca6b1dc-ca65-4543-85d6-f4f231310dc2.jpg",
+      "max": 200,
       "shopId": 1,
       "menuId": 3
     },
     {
-      "id": 8,
-      "name": "Food 8",
-      "description": "Description 8",
-      "initialPrice": 800,
-      "currentPrice": 80,
-      "image": "food8.jpg",
-      "max": 80,
+      "id": 17,
+      "name": "Mỳ Xào Mềm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/505e0451-136a-44ec-8679-ebf5dfcadda6.jpg",
+      "max": 200,
       "shopId": 1,
       "menuId": 3
+    },
+    {
+      "id": 18,
+      "name": "Mỳ Xào Mềm Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/81b52285-c763-4222-adef-6f75e3c54076.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 3
+    },
+    {
+      "id": 19,
+      "name": "Mỳ Xào Giòn Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/b0f11dd3-82d8-43a0-bba9-c6d784db4686.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 3
+    },
+    {
+      "id": 20,
+      "name": "Mỳ xào Giòn Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/c188de9e-fd29-488b-957b-6f5f721bf8ec.jpg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 3
+    },
+    {
+      "id": 21,
+      "name": "Cơm gà xối mỡ + chai coca",
+      "description": "1 cơm gà xối mỡ + 1 chai coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e0a83968-21c8-4d06-84ed-b5ab013a-5150192c-201217110508.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 4
+    },
+    {
+      "id": 22,
+      "name": "Cơm gà xé + Coca",
+      "description": "1 Cơm gà xé + 1 Coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e465cab1-c609-466d-96e8-b6fe1029-e80a7d6f-201116160934.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 4
+    },
+    {
+      "id": 23,
+      "name": "Cơm ba chỉ + coca",
+      "description": "1 Cơm ba chỉ + 1 coca",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/20cc4514-8ef6-4f33-a6fd-e9663b48-45ad9934-201117100332.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 4
+    },
+    {
+      "id": 23,
+      "name": "Cơm thịt xíu + coca",
+      "description": "1 Cơm thịt xíu + 1 coca",
+      "initialPrice": 37000,
+      "currentPrice": 37000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4ec023ff-c3ab-49b1-b1ea-ba3dbe83-f15c3126-201117100610.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 4
+    },
+    {
+      "id": 24,
+      "name": "Bún đậu thập cẩm",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm.",
+      "initialPrice": 33000,
+      "currentPrice": 33000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/38618d95-9f99-44aa-9ee7-ee0adeb1d96d.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 5
+    },
+    {
+      "id": 25,
+      "name": "Bún đậu đặc biệt",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm, dồi chiên, nem chua rán.",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f79efef0-288c-4f7d-91c9-b00ea14c-99f70ae4-201010030201.jpeg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 5
+    },
+    {
+      "id": 26,
+      "name": "Bún đậu mắm tôm",
+      "description": "Bún, đậu.",
+      "initialPrice": 16000,
+      "currentPrice": 16000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/34b6c877-b3f7-4fb0-9ed2-5009832982b4.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 5
+    },
+    {
+      "id": 27,
+      "name": "Bún đậu thịt",
+      "description": "Bún, đậu, thịt heo luộc.",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/58ff69e2-71d4-45bb-850f-d3339107452f.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 5
+    },
+    {
+      "id": 28,
+      "name": "Bún đậu đặc biệt mẹt khổng lồ",
+      "description": "3 - 4 người ăn",
+      "initialPrice": 135000,
+      "currentPrice": 135000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b7c4c5a-a062-421d-af38-4f5d9e7986a8.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 5
+    },
+    {
+      "id": 29,
+      "name": "Bún",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9308a330-a758-4a69-ae3a-570267035a36.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 6
+    },
+    {
+      "id": 30,
+      "name": "Đậu",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0318e408-2f38-4ecb-bb11-fd52e686ce90.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 6
+    },
+    {
+      "id": 31,
+      "name": "Dồi chiên thêm",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1714b043-c0d3-41f1-952d-80710f5bbe9c.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 6
+    },
+    {
+      "id": 32,
+      "name": "Chả cốm",
+      "description": "",
+      "initialPrice": 18000,
+      "currentPrice": 18000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/bb55d602-f6e6-4aed-a565-6ab0fc603db1.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 6
+    },
+    {
+      "id": 33,
+      "name": "Mắm tôm thêm",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06ff638-eecf-4818-b966-6192c9140de2.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 6
+    },
+    {
+      "id": 34,
+      "name": "Trà tắc khổng lồ",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4259224a-74c6-470d-ac17-710853624475.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 35,
+      "name": "Trà đào",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/2fcbf056-41a1-49af-9c4d-4a6b71c733ac.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 36,
+      "name": "Trà tắc",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b812930-f171-4d1e-a313-702d2ab7855c.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 37,
+      "name": "Chanh dây",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/91fdfb45-dbf6-48a1-a4b7-622df787374e.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 38,
+      "name": "Trà Tắc Con Cá Siêu To Khổng Lồ",
+      "description": "Trà tắc mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06980ff-a4fe-4bff-a284-5680eca56336.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 39,
+      "name": "Trà Đào Con Cá",
+      "description": "Trà Đào mix Thạch rau câu Con Cá",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1ebd8849-ddcc-468a-8bdf-e89b0cae2676.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 40,
+      "name": "Trà Chanh Con Cá Khổng Lồ",
+      "description": "Trà Chanh mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/874d6361-1e04-4f6a-8bd8-f2662e89839d.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 7
+    },
+    {
+      "id": 41,
+      "name": "Nem chua rán Hà Nội",
+      "description": "",
+      "initialPrice": 23000,
+      "currentPrice": 23000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/c2c8bd61-1b95-4f0b-8794-b32f24873a60.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 42,
+      "name": "Khoai lang kén",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18dfe6d2-a5d2-4a23-ac4f-a695596687c1.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 43,
+      "name": "Phô mai que 1 cây",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/dd996d82-3750-4fe0-83f1-d8d17a976bdc.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 44,
+      "name": "Xúc xích chiên (1 cây)",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/14e249a2-dae5-44cc-9f89-6b227c7012f7.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 45,
+      "name": "Tôm viên chiên",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/68b72f19-2cc8-4f56-b6a5-68f47e8ae78d.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 46,
+      "name": "Cá viên chiên (phần lớn)",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/3409617c-7194-46b5-abfe-c42ddedb-e931bd8f-220214115940.jpeg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 47,
+      "name": "Chân Gà Sả Tắc",
+      "description": "",
+      "initialPrice": 60000,
+      "currentPrice": 60000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18aacd22-9469-4840-b9b9-fa6c8f571d6e.jpeg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 48,
+      "name": "Nem chua rán Hà Nội (Lớn)",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0a5b66f9-48d4-42b0-9c39-3d60bf94-1f8fc6e8-211025072150.jpeg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 8
+    },
+    {
+      "id": 49,
+      "name": "Combo 6 : 1 Mình Vẫn Vui",
+      "description": "Bún đậu thập cẩm + Nước Chanh Dây",
+      "initialPrice": 48000,
+      "currentPrice": 48000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/7986bfd0-fbd8-40d1-a715-fa0d2d23c984.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 50,
+      "name": "Combo1: Bún đậu thịt + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f60dd0aa-7807-461a-b270-328dfd8b5a4f.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 51,
+      "name": "Combo: Bún đậu thập cẩm + Trà Tắc Con Cá",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0091153f-ea6e-488f-80e8-6a8a1be4473a.jpeg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 52,
+      "name": "Combo 3",
+      "description": "Ăn vặt: 10 viên cá, 10 viên bò, 10 viên tôm, 4 viên ốc nhồi, 1 cây xúc xích",
+      "initialPrice": 80000,
+      "currentPrice": 80000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9ade9e24-3a78-493b-986a-487da9dbb256.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 53,
+      "name": "Combo2: Nem chua rán Hà Nội + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e186a78d-285b-49d6-bf0d-ca4acb3acb2b.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 54,
+      "name": "Combo 7: Ăn vặt ( Cá viên chiên, bò viên, tôm viên)",
+      "description": "10 cá viên, 10 tôm viên, 10 bò viên",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/ff539330-ac40-4e07-ba02-55574d7076fb.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 9
+    },
+    {
+      "id": 55,
+      "name": "Nem chua rán Hà Nội (chưa chiên)",
+      "description": "10 cây Nem chua rán sống chưa lăn bột",
+      "initialPrice": 43000,
+      "currentPrice": 43000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/88024117-a28b-4fae-80e2-5f650a52910a.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 10
+    },
+    {
+      "id": 56,
+      "name": "Bột chiên xù (gói 100g)",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/a7f7cf22-961c-4b1c-9189-e3074e57cf94.jpg",
+      "max": 200,
+      "shopId": 2,
+      "menuId": 10
+    },
+    {
+      "id": 57,
+      "name": "Cơm gà xé",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/cfbc7b9a-0958-4ade-9d04-d36fb081f45e.jpg",
+      "max": 30,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 58,
+      "name": "Cơm ba chỉ giòn da",
+      "description": " ",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/6e61e10b-1071-4dab-bc61-397dbe663887.jpg",
+      "max": 20,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 59,
+      "name": "Cơm thịt xíu",
+      "description": " ",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/2660446e-c65e-4f52-a976-197abc00fa86.jpg",
+      "max": 30,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 60,
+      "name": "Cơm sườn nướng",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a417c672-5c74-4cf4-9ffd-4867e980-b8b7ee91-210304131548.jpeg",
+      "max": 0,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 61,
+      "name": "Cơm thêm",
+      "description": " ",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/184c7e43-4df6-4a9c-afbd-aae53f7b5a99.jpg",
+      "max": 50,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 62,
+      "name": "Cơm gà xối mỡ",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4476c627-2d7d-45fb-be2f-a94b2ee0-538dd1e0-201216184616.jpeg",
+      "max": 60,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 63,
+      "name": "Cơm dương châu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e92c4637-0b79-43e6-802e-ef12bfa4db21.jpg",
+      "max": 70,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 64,
+      "name": "Cơm bò xào",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 65,
+      "name": "Cơm gà chiên mắm",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 66,
+      "name": "Cơm gà quay",
+      "description": "",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/56257b97-d8e2-4fd5-bb92-4ce60e6ee50c.jpg",
+      "max": 80,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 67,
+      "name": "Cơm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a65fa0ce-1a29-4fa7-812d-35be0afeba97.jpg",
+      "max": 80,
+      "shopId": 3,
+      "menuId": 11
+    },
+    {
+      "id": 68,
+      "name": "Coca",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a3349165-ac5a-4422-b1ee-9d0300a8c4a2.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 12
+    },
+    {
+      "id": 69,
+      "name": "Sprite",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/ff1cc9a0-251e-499d-8d9d-48b567802be4.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 12
+    },
+    {
+      "id": 70,
+      "name": "Nước Suối",
+      "description": "",
+      "initialPrice": 7000,
+      "currentPrice": 7000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/27b1b13e-369e-4d92-9b72-3b3e6675c891.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 12
+    },
+    {
+      "id": 71,
+      "name": "Aquarius",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/48cc1a1f-958c-4c8d-9d56-06be330daca7.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 12
+    },
+    {
+      "id": 72,
+      "name": "Mỳ Xíu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/bca6b1dc-ca65-4543-85d6-f4f231310dc2.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 12
+    },
+    {
+      "id": 73,
+      "name": "Mỳ Xào Mềm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/505e0451-136a-44ec-8679-ebf5dfcadda6.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 13
+    },
+    {
+      "id": 74,
+      "name": "Mỳ Xào Mềm Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/81b52285-c763-4222-adef-6f75e3c54076.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 13
+    },
+    {
+      "id": 75,
+      "name": "Mỳ Xào Giòn Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/b0f11dd3-82d8-43a0-bba9-c6d784db4686.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 13
+    },
+    {
+      "id": 76,
+      "name": "Mỳ xào Giòn Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/c188de9e-fd29-488b-957b-6f5f721bf8ec.jpg",
+      "max": 200,
+      "shopId": 3,
+      "menuId": 13
+    },
+    {
+      "id": 77,
+      "name": "Cơm gà xối mỡ + chai coca",
+      "description": "1 cơm gà xối mỡ + 1 chai coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e0a83968-21c8-4d06-84ed-b5ab013a-5150192c-201217110508.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 14
+    },
+    {
+      "id": 78,
+      "name": "Cơm gà xé + Coca",
+      "description": "1 Cơm gà xé + 1 Coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e465cab1-c609-466d-96e8-b6fe1029-e80a7d6f-201116160934.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 14
+    },
+    {
+      "id": 79,
+      "name": "Cơm ba chỉ + coca",
+      "description": "1 Cơm ba chỉ + 1 coca",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/20cc4514-8ef6-4f33-a6fd-e9663b48-45ad9934-201117100332.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 14
+    },
+    {
+      "id": 80,
+      "name": "Cơm thịt xíu + coca",
+      "description": "1 Cơm thịt xíu + 1 coca",
+      "initialPrice": 37000,
+      "currentPrice": 37000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4ec023ff-c3ab-49b1-b1ea-ba3dbe83-f15c3126-201117100610.jpeg",
+      "max": 200,
+      "shopId": 1,
+      "menuId": 14
+    },
+    {
+      "id": 81,
+      "name": "Bún đậu thập cẩm",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm.",
+      "initialPrice": 33000,
+      "currentPrice": 33000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/38618d95-9f99-44aa-9ee7-ee0adeb1d96d.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 15
+    },
+    {
+      "id": 82,
+      "name": "Bún đậu đặc biệt",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm, dồi chiên, nem chua rán.",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f79efef0-288c-4f7d-91c9-b00ea14c-99f70ae4-201010030201.jpeg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 15
+    },
+    {
+      "id": 83,
+      "name": "Bún đậu mắm tôm",
+      "description": "Bún, đậu.",
+      "initialPrice": 16000,
+      "currentPrice": 16000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/34b6c877-b3f7-4fb0-9ed2-5009832982b4.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 15
+    },
+    {
+      "id": 84,
+      "name": "Bún đậu thịt",
+      "description": "Bún, đậu, thịt heo luộc.",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/58ff69e2-71d4-45bb-850f-d3339107452f.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 15
+    },
+    {
+      "id": 85,
+      "name": "Bún đậu đặc biệt mẹt khổng lồ",
+      "description": "3 - 4 người ăn",
+      "initialPrice": 135000,
+      "currentPrice": 135000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b7c4c5a-a062-421d-af38-4f5d9e7986a8.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 15
+    },
+    {
+      "id": 86,
+      "name": "Bún",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9308a330-a758-4a69-ae3a-570267035a36.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 16
+    },
+    {
+      "id": 87,
+      "name": "Đậu",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0318e408-2f38-4ecb-bb11-fd52e686ce90.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 16
+    },
+    {
+      "id": 88,
+      "name": "Dồi chiên thêm",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1714b043-c0d3-41f1-952d-80710f5bbe9c.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 16
+    },
+    {
+      "id": 89,
+      "name": "Chả cốm",
+      "description": "",
+      "initialPrice": 18000,
+      "currentPrice": 18000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/bb55d602-f6e6-4aed-a565-6ab0fc603db1.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 16
+    },
+    {
+      "id": 90,
+      "name": "Mắm tôm thêm",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06ff638-eecf-4818-b966-6192c9140de2.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 16
+    },
+    {
+      "id": 91,
+      "name": "Trà tắc khổng lồ",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4259224a-74c6-470d-ac17-710853624475.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 92,
+      "name": "Trà đào",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/2fcbf056-41a1-49af-9c4d-4a6b71c733ac.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 93,
+      "name": "Trà tắc",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b812930-f171-4d1e-a313-702d2ab7855c.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 94,
+      "name": "Chanh dây",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/91fdfb45-dbf6-48a1-a4b7-622df787374e.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 95,
+      "name": "Trà Tắc Con Cá Siêu To Khổng Lồ",
+      "description": "Trà tắc mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06980ff-a4fe-4bff-a284-5680eca56336.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 96,
+      "name": "Trà Đào Con Cá",
+      "description": "Trà Đào mix Thạch rau câu Con Cá",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1ebd8849-ddcc-468a-8bdf-e89b0cae2676.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 97,
+      "name": "Trà Chanh Con Cá Khổng Lồ",
+      "description": "Trà Chanh mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/874d6361-1e04-4f6a-8bd8-f2662e89839d.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 17
+    },
+    {
+      "id": 98,
+      "name": "Nem chua rán Hà Nội",
+      "description": "",
+      "initialPrice": 23000,
+      "currentPrice": 23000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/c2c8bd61-1b95-4f0b-8794-b32f24873a60.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 99,
+      "name": "Khoai lang kén",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18dfe6d2-a5d2-4a23-ac4f-a695596687c1.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 100,
+      "name": "Phô mai que 1 cây",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/dd996d82-3750-4fe0-83f1-d8d17a976bdc.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 101,
+      "name": "Xúc xích chiên (1 cây)",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/14e249a2-dae5-44cc-9f89-6b227c7012f7.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 102,
+      "name": "Tôm viên chiên",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/68b72f19-2cc8-4f56-b6a5-68f47e8ae78d.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 103,
+      "name": "Cá viên chiên (phần lớn)",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/3409617c-7194-46b5-abfe-c42ddedb-e931bd8f-220214115940.jpeg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 104,
+      "name": "Chân Gà Sả Tắc",
+      "description": "",
+      "initialPrice": 60000,
+      "currentPrice": 60000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18aacd22-9469-4840-b9b9-fa6c8f571d6e.jpeg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 105,
+      "name": "Nem chua rán Hà Nội (Lớn)",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0a5b66f9-48d4-42b0-9c39-3d60bf94-1f8fc6e8-211025072150.jpeg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 18
+    },
+    {
+      "id": 106,
+      "name": "Combo 6 : 1 Mình Vẫn Vui",
+      "description": "Bún đậu thập cẩm + Nước Chanh Dây",
+      "initialPrice": 48000,
+      "currentPrice": 48000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/7986bfd0-fbd8-40d1-a715-fa0d2d23c984.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 107,
+      "name": "Combo1: Bún đậu thịt + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f60dd0aa-7807-461a-b270-328dfd8b5a4f.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 108,
+      "name": "Combo: Bún đậu thập cẩm + Trà Tắc Con Cá",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0091153f-ea6e-488f-80e8-6a8a1be4473a.jpeg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 109,
+      "name": "Combo 3",
+      "description": "Ăn vặt: 10 viên cá, 10 viên bò, 10 viên tôm, 4 viên ốc nhồi, 1 cây xúc xích",
+      "initialPrice": 80000,
+      "currentPrice": 80000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9ade9e24-3a78-493b-986a-487da9dbb256.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 110,
+      "name": "Combo2: Nem chua rán Hà Nội + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e186a78d-285b-49d6-bf0d-ca4acb3acb2b.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 111,
+      "name": "Combo 7: Ăn vặt ( Cá viên chiên, bò viên, tôm viên)",
+      "description": "10 cá viên, 10 tôm viên, 10 bò viên",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/ff539330-ac40-4e07-ba02-55574d7076fb.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 19
+    },
+    {
+      "id": 112,
+      "name": "Nem chua rán Hà Nội (chưa chiên)",
+      "description": "10 cây Nem chua rán sống chưa lăn bột",
+      "initialPrice": 43000,
+      "currentPrice": 43000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/88024117-a28b-4fae-80e2-5f650a52910a.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 20
+    },
+    {
+      "id": 113,
+      "name": "Bột chiên xù (gói 100g)",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/a7f7cf22-961c-4b1c-9189-e3074e57cf94.jpg",
+      "max": 200,
+      "shopId": 4,
+      "menuId": 20
+    },
+    {
+      "id": 114,
+      "name": "Cơm gà xé",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/cfbc7b9a-0958-4ade-9d04-d36fb081f45e.jpg",
+      "max": 30,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 115,
+      "name": "Cơm ba chỉ giòn da",
+      "description": " ",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/6e61e10b-1071-4dab-bc61-397dbe663887.jpg",
+      "max": 20,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 116,
+      "name": "Cơm thịt xíu",
+      "description": " ",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/2660446e-c65e-4f52-a976-197abc00fa86.jpg",
+      "max": 30,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 117,
+      "name": "Cơm sườn nướng",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a417c672-5c74-4cf4-9ffd-4867e980-b8b7ee91-210304131548.jpeg",
+      "max": 0,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 118,
+      "name": "Cơm thêm",
+      "description": " ",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/184c7e43-4df6-4a9c-afbd-aae53f7b5a99.jpg",
+      "max": 50,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 119,
+      "name": "Cơm gà xối mỡ",
+      "description": "",
+      "initialPrice": 27000,
+      "currentPrice": 27000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4476c627-2d7d-45fb-be2f-a94b2ee0-538dd1e0-201216184616.jpeg",
+      "max": 60,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 120,
+      "name": "Cơm dương châu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e92c4637-0b79-43e6-802e-ef12bfa4db21.jpg",
+      "max": 70,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 121,
+      "name": "Cơm bò xào",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 122,
+      "name": "Cơm gà chiên mắm",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/f0f6f704-90ab-417a-b76d-9a40a15ef51c.jpg",
+      "max": 80,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 123,
+      "name": "Cơm gà quay",
+      "description": "",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/56257b97-d8e2-4fd5-bb92-4ce60e6ee50c.jpg",
+      "max": 80,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 124,
+      "name": "Cơm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a65fa0ce-1a29-4fa7-812d-35be0afeba97.jpg",
+      "max": 80,
+      "shopId": 5,
+      "menuId": 21
+    },
+    {
+      "id": 125,
+      "name": "Coca",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/a3349165-ac5a-4422-b1ee-9d0300a8c4a2.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 22
+    },
+    {
+      "id": 126,
+      "name": "Sprite",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/ff1cc9a0-251e-499d-8d9d-48b567802be4.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 22
+    },
+    {
+      "id": 127,
+      "name": "Nước Suối",
+      "description": "",
+      "initialPrice": 7000,
+      "currentPrice": 7000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/27b1b13e-369e-4d92-9b72-3b3e6675c891.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 22
+    },
+    {
+      "id": 128,
+      "name": "Aquarius",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/48cc1a1f-958c-4c8d-9d56-06be330daca7.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 22
+    },
+    {
+      "id": 129,
+      "name": "Mỳ Xíu",
+      "description": "",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/bca6b1dc-ca65-4543-85d6-f4f231310dc2.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 23
+    },
+    {
+      "id": 130,
+      "name": "Mỳ Xào Mềm Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/505e0451-136a-44ec-8679-ebf5dfcadda6.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 23
+    },
+    {
+      "id": 131,
+      "name": "Mỳ Xào Mềm Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/81b52285-c763-4222-adef-6f75e3c54076.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 23
+    },
+    {
+      "id": 132,
+      "name": "Mỳ Xào Giòn Bò",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/b0f11dd3-82d8-43a0-bba9-c6d784db4686.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 23
+    },
+    {
+      "id": 133,
+      "name": "Mỳ xào Giòn Hải Sản",
+      "description": "",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/c188de9e-fd29-488b-957b-6f5f721bf8ec.jpg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 23
+    },
+    {
+      "id": 134,
+      "name": "Cơm gà xối mỡ + chai coca",
+      "description": "1 cơm gà xối mỡ + 1 chai coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e0a83968-21c8-4d06-84ed-b5ab013a-5150192c-201217110508.jpeg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 24
+    },
+    {
+      "id": 135,
+      "name": "Cơm gà xé + Coca",
+      "description": "1 Cơm gà xé + 1 Coca",
+      "initialPrice": 39000,
+      "currentPrice": 39000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/e465cab1-c609-466d-96e8-b6fe1029-e80a7d6f-201116160934.jpeg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 24
+    },
+    {
+      "id": 136,
+      "name": "Cơm ba chỉ + coca",
+      "description": "1 Cơm ba chỉ + 1 coca",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/20cc4514-8ef6-4f33-a6fd-e9663b48-45ad9934-201117100332.jpeg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 24
+    },
+    {
+      "id": 137,
+      "name": "Cơm thịt xíu + coca",
+      "description": "1 Cơm thịt xíu + 1 coca",
+      "initialPrice": 37000,
+      "currentPrice": 37000,
+      "image": "https://images.foody.vn/res/g28/277130/s400x400/4ec023ff-c3ab-49b1-b1ea-ba3dbe83-f15c3126-201117100610.jpeg",
+      "max": 200,
+      "shopId": 5,
+      "menuId": 24
+    },
+    {
+      "id": 138,
+      "name": "Bún đậu thập cẩm",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm.",
+      "initialPrice": 33000,
+      "currentPrice": 33000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/38618d95-9f99-44aa-9ee7-ee0adeb1d96d.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 25
+    },
+    {
+      "id": 139,
+      "name": "Bún đậu đặc biệt",
+      "description": "Bún, đậu, thịt heo luộc, chả cốm, dồi chiên, nem chua rán.",
+      "initialPrice": 50000,
+      "currentPrice": 50000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f79efef0-288c-4f7d-91c9-b00ea14c-99f70ae4-201010030201.jpeg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 25
+    },
+    {
+      "id": 140,
+      "name": "Bún đậu mắm tôm",
+      "description": "Bún, đậu.",
+      "initialPrice": 16000,
+      "currentPrice": 16000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/34b6c877-b3f7-4fb0-9ed2-5009832982b4.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 25
+    },
+    {
+      "id": 141,
+      "name": "Bún đậu thịt",
+      "description": "Bún, đậu, thịt heo luộc.",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/58ff69e2-71d4-45bb-850f-d3339107452f.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 25
+    },
+    {
+      "id": 142,
+      "name": "Bún đậu đặc biệt mẹt khổng lồ",
+      "description": "3 - 4 người ăn",
+      "initialPrice": 135000,
+      "currentPrice": 135000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b7c4c5a-a062-421d-af38-4f5d9e7986a8.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 25
+    },
+    {
+      "id": 143,
+      "name": "Bún",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9308a330-a758-4a69-ae3a-570267035a36.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 26
+    },
+    {
+      "id": 144,
+      "name": "Đậu",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0318e408-2f38-4ecb-bb11-fd52e686ce90.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 26
+    },
+    {
+      "id": 145,
+      "name": "Dồi chiên thêm",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1714b043-c0d3-41f1-952d-80710f5bbe9c.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 26
+    },
+    {
+      "id": 146,
+      "name": "Chả cốm",
+      "description": "",
+      "initialPrice": 18000,
+      "currentPrice": 18000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/bb55d602-f6e6-4aed-a565-6ab0fc603db1.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 26
+    },
+    {
+      "id": 147,
+      "name": "Mắm tôm thêm",
+      "description": "",
+      "initialPrice": 5000,
+      "currentPrice": 5000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06ff638-eecf-4818-b966-6192c9140de2.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 26
+    },
+    {
+      "id": 148,
+      "name": "Trà tắc khổng lồ",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4259224a-74c6-470d-ac17-710853624475.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 149,
+      "name": "Trà đào",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/2fcbf056-41a1-49af-9c4d-4a6b71c733ac.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 150,
+      "name": "Trà tắc",
+      "description": "",
+      "initialPrice": 10000,
+      "currentPrice": 10000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/4b812930-f171-4d1e-a313-702d2ab7855c.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 151,
+      "name": "Chanh dây",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/91fdfb45-dbf6-48a1-a4b7-622df787374e.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 152,
+      "name": "Trà Tắc Con Cá Siêu To Khổng Lồ",
+      "description": "Trà tắc mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e06980ff-a4fe-4bff-a284-5680eca56336.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 153,
+      "name": "Trà Đào Con Cá",
+      "description": "Trà Đào mix Thạch rau câu Con Cá",
+      "initialPrice": 25000,
+      "currentPrice": 25000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/1ebd8849-ddcc-468a-8bdf-e89b0cae2676.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 154,
+      "name": "Trà Chanh Con Cá Khổng Lồ",
+      "description": "Trà Chanh mix Thạch rau câu con cá",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/874d6361-1e04-4f6a-8bd8-f2662e89839d.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 27
+    },
+    {
+      "id": 155,
+      "name": "Nem chua rán Hà Nội",
+      "description": "",
+      "initialPrice": 23000,
+      "currentPrice": 23000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/c2c8bd61-1b95-4f0b-8794-b32f24873a60.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 156,
+      "name": "Khoai lang kén",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18dfe6d2-a5d2-4a23-ac4f-a695596687c1.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 157,
+      "name": "Phô mai que 1 cây",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/dd996d82-3750-4fe0-83f1-d8d17a976bdc.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 158,
+      "name": "Xúc xích chiên (1 cây)",
+      "description": "",
+      "initialPrice": 12000,
+      "currentPrice": 12000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/14e249a2-dae5-44cc-9f89-6b227c7012f7.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 159,
+      "name": "Tôm viên chiên",
+      "description": "",
+      "initialPrice": 15000,
+      "currentPrice": 15000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/68b72f19-2cc8-4f56-b6a5-68f47e8ae78d.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 160,
+      "name": "Cá viên chiên (phần lớn)",
+      "description": "",
+      "initialPrice": 20000,
+      "currentPrice": 20000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/3409617c-7194-46b5-abfe-c42ddedb-e931bd8f-220214115940.jpeg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 161,
+      "name": "Chân Gà Sả Tắc",
+      "description": "",
+      "initialPrice": 60000,
+      "currentPrice": 60000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/18aacd22-9469-4840-b9b9-fa6c8f571d6e.jpeg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 162,
+      "name": "Nem chua rán Hà Nội (Lớn)",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0a5b66f9-48d4-42b0-9c39-3d60bf94-1f8fc6e8-211025072150.jpeg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 28
+    },
+    {
+      "id": 163,
+      "name": "Combo 6 : 1 Mình Vẫn Vui",
+      "description": "Bún đậu thập cẩm + Nước Chanh Dây",
+      "initialPrice": 48000,
+      "currentPrice": 48000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/7986bfd0-fbd8-40d1-a715-fa0d2d23c984.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 164,
+      "name": "Combo1: Bún đậu thịt + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/f60dd0aa-7807-461a-b270-328dfd8b5a4f.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 165,
+      "name": "Combo: Bún đậu thập cẩm + Trà Tắc Con Cá",
+      "description": "",
+      "initialPrice": 45000,
+      "currentPrice": 45000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/0091153f-ea6e-488f-80e8-6a8a1be4473a.jpeg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 166,
+      "name": "Combo 3",
+      "description": "Ăn vặt: 10 viên cá, 10 viên bò, 10 viên tôm, 4 viên ốc nhồi, 1 cây xúc xích",
+      "initialPrice": 80000,
+      "currentPrice": 80000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/9ade9e24-3a78-493b-986a-487da9dbb256.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 167,
+      "name": "Combo2: Nem chua rán Hà Nội + Trà tắc",
+      "description": "",
+      "initialPrice": 42000,
+      "currentPrice": 42000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/e186a78d-285b-49d6-bf0d-ca4acb3acb2b.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 168,
+      "name": "Combo 7: Ăn vặt ( Cá viên chiên, bò viên, tôm viên)",
+      "description": "10 cá viên, 10 tôm viên, 10 bò viên",
+      "initialPrice": 30000,
+      "currentPrice": 30000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/ff539330-ac40-4e07-ba02-55574d7076fb.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 29
+    },
+    {
+      "id": 169,
+      "name": "Nem chua rán Hà Nội (chưa chiên)",
+      "description": "10 cây Nem chua rán sống chưa lăn bột",
+      "initialPrice": 43000,
+      "currentPrice": 43000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/88024117-a28b-4fae-80e2-5f650a52910a.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 30
+    },
+    {
+      "id": 170,
+      "name": "Bột chiên xù (gói 100g)",
+      "description": "",
+      "initialPrice": 8000,
+      "currentPrice": 8000,
+      "image": "https://images.foody.vn/res/g90/892174/s400x400/a7f7cf22-961c-4b1c-9189-e3074e57cf94.jpg",
+      "max": 200,
+      "shopId": 6,
+      "menuId": 30
     }
   ],
   "purchases": [

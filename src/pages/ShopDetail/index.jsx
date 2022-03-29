@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,8 +19,9 @@ import {
   CommentOutlined,
   UserOutlined,
   HeartOutlined,
+  ClockCircleOutlined,
 } from "@ant-design/icons";
-import { FaHeart } from "react-icons/fa";
+
 import moment from "moment";
 
 import {
@@ -51,7 +52,6 @@ const ShopDetail = () => {
     (state) => state.commentReducer
   );
   const { userInfo } = useSelector((state) => state.userReducer);
-  const { favoriteList } = useSelector((state) => state.favoriteReducer);
 
   let totalRate = 0;
   commentList.data.forEach((item) => {
@@ -235,7 +235,8 @@ const ShopDetail = () => {
                     <S.ShopKind>{shopDetail.data.kind}</S.ShopKind>
                     <S.ShopAddress>{shopDetail.data.address}</S.ShopAddress>
                     <S.ShopActiveTime>
-                      {shopDetail.data.openTime} - {shopDetail.data.closeTime}
+                      <ClockCircleOutlined /> {shopDetail.data.openTime} -{" "}
+                      {shopDetail.data.closeTime}
                     </S.ShopActiveTime>
                     <Space>
                       {renderFavoriteButton()}

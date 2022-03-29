@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Row, Col, Image, Skeleton } from "antd";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Row, Col, Image } from "antd";
 
 import * as S from "./styles";
 import { addToCartAction } from "../../../../redux/actions";
@@ -23,7 +23,7 @@ const ProductItem = ({ product, shopId }) => {
     <S.ProductItem>
       <Row gutter={16} align={"center"}>
         <Col span={4}>
-          <S.ProductImage src="adadad" />
+          <Image src={product.image} width={60} />
         </Col>
         <Col span={12}>
           <S.ProductName>{product.name}</S.ProductName>

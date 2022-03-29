@@ -93,7 +93,7 @@ const ChangeUserInfoTab = (activeKey) => {
         </Form.Item>
       </Form>
     );
-  }, [userInfo]);
+  }, [userInfo.data]);
 
   const handleChangeUserInfo = (values) => {
     notification.success({

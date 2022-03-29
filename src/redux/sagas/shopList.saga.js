@@ -67,10 +67,60 @@ function* getShopListSaga(action) {
   }
 }
 
+function* getTopShopListSaga(action) {
+  try {
+    const result = yield axios.get("http://localhost:4000/tops", {
+      params: {
+        _embed: "shops",
+      },
+    });
+    yield put({
+      type: SUCCESS(SHOP_LIST_ACTION.GET_TOP_SHOP_LIST),
+      payload: {
+        data: result.data[0],
+      },
+    });
+  } catch (error) {
+    yield put({
+      type: FAIL(SHOP_LIST_ACTION.GET_TOP_SHOP_LIST),
+      payload: "Lấy data lỗi",
+    });
+  }
+}
+
+function* getNewShopListSaga(action) {
+  try {
+    const result = yield axios.get("http://localhost:4000/news", {
+      params: {
+        _embed: "shops",
+      },
+    });
+    yield put({
+      type: SUCCESS(SHOP_LIST_ACTION.GET_NEW_SHOP_LIST),
+      payload: {
+        data: result.data[0],
+      },
+    });
+  } catch (error) {
+    yield put({
+      type: FAIL(SHOP_LIST_ACTION.GET_NEW_SHOP_LIST),
+      payload: "Lấy data lỗi",
+    });
+  }
+}
+
 export default function* shopListSaga() {
   yield takeEvery(
     REQUEST(SHOP_LIST_ACTION.GET_CATEGORY_LIST),
     getCategoryListSaga
   );
   yield debounce(500, REQUEST(SHOP_LIST_ACTION.GET_SHOP_LIST), getShopListSaga);
+  yield takeEvery(
+    REQUEST(SHOP_LIST_ACTION.GET_TOP_SHOP_LIST),
+    getTopShopListSaga
+  );
+  yield takeEvery(
+    REQUEST(SHOP_LIST_ACTION.GET_NEW_SHOP_LIST),
+    getNewShopListSaga
+  );
 }

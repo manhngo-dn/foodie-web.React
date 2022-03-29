@@ -286,7 +286,7 @@ const ShopList = () => {
       <S.ShopsListContainer>
         <Row gutter={[16, 16]}>{renderShopList}</Row>
       </S.ShopsListContainer>
-      {renderPagination()},
+      {renderPagination()}
     </S.Wrapper>
   );
 };

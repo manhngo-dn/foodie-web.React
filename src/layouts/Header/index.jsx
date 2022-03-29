@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaUserAlt } from "react-icons/fa";
@@ -11,19 +11,15 @@ import {
   getCategoryListAction,
   getShopListAction,
   signOutAction,
-  getServiceListAction,
 } from "../../redux/actions";
 
-import { Select, Button, Row, Col, Menu, Dropdown } from "antd";
+import { Button, Menu, Dropdown } from "antd";
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getServiceListAction());
-  }, []);
   const { serviceList } = useSelector((state) => state.serviceReducer);
 
   const { userInfo } = useSelector((state) => state.userReducer);

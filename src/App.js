@@ -6,17 +6,23 @@ import { useDispatch } from "react-redux";
 import "./App.css";
 import PrimaryLayout from "./layouts/PrimaryLayout";
 import LoginLayout from "./layouts/LoginLayout";
-import ShopList from "./pages/ShopList";
-import Home from "./pages/Home";
+import ShopList from "./pages/ShopListPage";
+import Home from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import UserInfoPage from "./pages/UserInfoPage";
 import ShopDetail from "./pages/ShopDetail";
 import { ROUTERS } from "./constants/routers";
-import { getUserInfoAction, addToCartAction } from "./redux/actions";
+import {
+  getUserInfoAction,
+  addToCartAction,
+  getServiceListAction,
+} from "./redux/actions";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(getServiceListAction());
+
     const accessToken = localStorage.getItem("accessToken");
     const cartList = JSON.parse(localStorage.getItem("cartList"));
 
@@ -33,8 +39,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path={ROUTERS.HOME} element={<Home />} />
         <Route element={<PrimaryLayout />}>
-          <Route path={ROUTERS.HOME} element={<Home />} />
           <Route path={ROUTERS.FOOD} element={<ShopList />} />
           <Route path={ROUTERS.FRESH} element={<ShopList />} />
           <Route path={ROUTERS.LIQUOR} element={<ShopList />} />

@@ -1,10 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Row,
   Col,
   notification,
-  Skeleton,
   Input,
   Space,
   Button,
@@ -354,11 +353,6 @@ const CartList = () => {
                 <Col>Phí vận chuyển</Col>
                 <Col>{SHIP_FEE.toLocaleString()}₫</Col>
               </Row>
-
-              {/* <Row gutter={16} justify={"space-between"}>
-                <Col>Giảm giá </Col>
-                <Col>- {SHIP_FEE.toLocaleString()}₫</Col>
-              </Row> */}
             </S.PaymentTotalPrice>
             <Row gutter={16} justify={"space-between"}>
               <Col>
