@@ -544,15 +544,7 @@
       "newsId": 1
     }
   ],
-  "favorites": [
-    {
-      "shopId": 1,
-      "userId": 1,
-      "createdAt": 1648574344499,
-      "updatedAt": 1648574344500,
-      "id": 1
-    }
-  ],
+  "favorites": [],
   "menus": [
     {
       "id": 1,

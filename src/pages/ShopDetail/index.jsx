@@ -104,28 +104,40 @@ const ShopDetail = () => {
   };
 
   const handleComment = (values) => {
-    dispatch(
-      sendCommentAction({
-        ...values,
-        rate: rateValue,
-        shopId: id,
-        userId: userInfo.data.id,
-      })
-    );
-    commentForm.resetFields();
-    setRateValue(0);
-    notification.success({
-      message: "Gửi bình luận thành công",
-    });
+    if (userInfo.data.id) {
+      dispatch(
+        sendCommentAction({
+          ...values,
+          rate: rateValue,
+          shopId: id,
+          userId: userInfo.data.id,
+        })
+      );
+      commentForm.resetFields();
+      setRateValue(0);
+      notification.success({
+        message: "Gửi bình luận thành công",
+      });
+    } else {
+      notification.error({
+        message: "Vui lòng đăng nhập để gửi bình luận",
+      });
+    }
   };
 
   const handleAddToFavoriteButton = () => {
-    dispatch(
-      addToFavoriteAction({
-        shopId: parseFloat(id),
-        userId: userInfo.data.id,
-      })
-    );
+    if (userInfo.data.id) {
+      dispatch(
+        addToFavoriteAction({
+          shopId: parseFloat(id),
+          userId: userInfo.data.id,
+        })
+      );
+    } else {
+      notification.error({
+        message: "Vui lòng đăng nhập để sử dụng chức năng này",
+      });
+    }
   };
 
   const handleRemoveFromFavoriteButton = (favoriteId) => {
