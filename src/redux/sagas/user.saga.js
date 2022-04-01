@@ -7,7 +7,10 @@ import { REQUEST, SUCCESS, FAIL, USER_ACTION } from "../constants";
 function* signInSaga(action) {
   try {
     const { data, callback } = action.payload;
-    const result = yield axios.post("http://localhost:4000/login", data);
+    const result = yield axios.post(
+      "https://foodie-web-delivery-api.herokuapp.com/login",
+      data
+    );
     yield localStorage.setItem("accessToken", result.data.accessToken);
     yield put({
       type: SUCCESS(USER_ACTION.SIGN_IN),
@@ -30,7 +33,10 @@ function* signInSaga(action) {
 function* signUpSaga(action) {
   try {
     const { data, callback } = action.payload;
-    yield axios.post("http://localhost:4000/register", data);
+    yield axios.post(
+      "https://foodie-web-delivery-api.herokuapp.com/register",
+      data
+    );
     yield put({
       type: SUCCESS(USER_ACTION.SIGN_UP),
     });
@@ -53,7 +59,9 @@ function* signUpSaga(action) {
 function* getUserInfoSaga(action) {
   try {
     const { id } = action.payload;
-    const result = yield axios.get(`http://localhost:4000/users/${id}`);
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/users/${id}`
+    );
     yield put({
       type: SUCCESS(USER_ACTION.GET_USER_INFO),
       payload: {
@@ -73,12 +81,15 @@ function* getUserInfoSaga(action) {
 function* updateUserInfoSaga(action) {
   try {
     const { id, location, fullName, email, phoneNumber } = action.payload;
-    const result = yield axios.patch(`http://localhost:4000/users/${id}`, {
-      location: location,
-      fullName: fullName,
-      email: email,
-      phoneNumber: phoneNumber,
-    });
+    const result = yield axios.patch(
+      `https://foodie-web-delivery-api.herokuapp.com/users/${id}`,
+      {
+        location: location,
+        fullName: fullName,
+        email: email,
+        phoneNumber: phoneNumber,
+      }
+    );
     yield put({
       type: SUCCESS(USER_ACTION.GET_USER_INFO),
       payload: {
@@ -98,13 +109,16 @@ function* updateUserInfoSaga(action) {
 function* changePasswordSaga(action) {
   try {
     const { id, data, callback } = action.payload;
-    yield axios.post("http://localhost:4000/login", {
+    yield axios.post("https://foodie-web-delivery-api.herokuapp.com/login", {
       email: data.email,
       password: data.oldPassword,
     });
-    yield axios.patch(`http://localhost:4000/users/${id}`, {
-      password: data.newPassword,
-    });
+    yield axios.patch(
+      `https://foodie-web-delivery-api.herokuapp.com/users/${id}`,
+      {
+        password: data.newPassword,
+      }
+    );
     if (callback?.clearForm) {
       yield callback.clearForm();
     }

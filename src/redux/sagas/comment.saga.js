@@ -7,14 +7,17 @@ function* getCommentListSaga(action) {
   try {
     const { shopId } = action.payload;
 
-    const result = yield axios.get(`http://localhost:4000/comments`, {
-      params: {
-        shopId: shopId,
-        _expand: "user",
-        _sort: "id",
-        _order: "desc",
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/comments`,
+      {
+        params: {
+          shopId: shopId,
+          _expand: "user",
+          _sort: "id",
+          _order: "desc",
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(COMMENT_ACTION.GET_COMMENT_LIST),
@@ -34,7 +37,7 @@ function* sendCommentSaga(action) {
   const { shopId } = action.payload;
   try {
     const result = yield axios.post(
-      `http://localhost:4000/comments`,
+      `https://foodie-web-delivery-api.herokuapp.com/comments`,
       action.payload
     );
 

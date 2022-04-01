@@ -12,7 +12,10 @@ import {
 function* addToFavoriteSaga(action) {
   const { shopId } = action.payload;
   try {
-    yield axios.post(`http://localhost:4000/favorites`, action.payload);
+    yield axios.post(
+      `https://foodie-web-delivery-api.herokuapp.com/favorites`,
+      action.payload
+    );
 
     yield put({
       type: REQUEST(SHOP_DETAIL_ACTION.GET_SHOP_DETAIL),
@@ -31,7 +34,9 @@ function* addToFavoriteSaga(action) {
 function* removeFromFavoriteSaga(action) {
   const { shopId, favoriteId } = action.payload;
   try {
-    yield axios.delete(`http://localhost:4000/favorites/${favoriteId}`);
+    yield axios.delete(
+      `https://foodie-web-delivery-api.herokuapp.com/favorites/${favoriteId}`
+    );
 
     yield put({
       type: REQUEST(SHOP_DETAIL_ACTION.GET_SHOP_DETAIL),

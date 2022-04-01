@@ -7,11 +7,14 @@ function* getMenuListSaga(action) {
   try {
     const { id } = action.payload;
 
-    const result = yield axios.get(`http://localhost:4000/menus`, {
-      params: {
-        shopId: id,
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/menus`,
+      {
+        params: {
+          shopId: id,
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(MEU_ACTION.GET_MENU_ACTION),

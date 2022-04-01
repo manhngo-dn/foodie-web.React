@@ -7,7 +7,10 @@ import { REQUEST, SUCCESS, FAIL, PURCHASE_ACTION } from "../constants";
 function* addPurchaseSaga(action) {
   const { data, callback } = action.payload;
   try {
-    yield axios.post(`http://localhost:4000/purchases`, data);
+    yield axios.post(
+      `https://foodie-web-delivery-api.herokuapp.com/purchases`,
+      data
+    );
 
     yield put({
       type: SUCCESS(PURCHASE_ACTION.ADD_PURCHASE),
@@ -32,16 +35,19 @@ function* addPurchaseSaga(action) {
 function* getPurchaseListSaga(action) {
   try {
     const { userId, page, limit } = action.payload;
-    const result = yield axios.get(`http://localhost:4000/purchases`, {
-      params: {
-        userId,
-        _expand: "shop",
-        _page: page,
-        _limit: limit,
-        _sort: "id",
-        _order: "desc",
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/purchases`,
+      {
+        params: {
+          userId,
+          _expand: "shop",
+          _page: page,
+          _limit: limit,
+          _sort: "id",
+          _order: "desc",
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(PURCHASE_ACTION.GET_PURCHASE_LIST),

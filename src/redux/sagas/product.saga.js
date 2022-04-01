@@ -7,11 +7,14 @@ function* getProductDetailSaga(action) {
   try {
     const { id } = action.payload;
 
-    const result = yield axios.get(`http://localhost:4000/products`, {
-      params: {
-        shopId: id,
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/products`,
+      {
+        params: {
+          shopId: id,
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(PRODUCT_ACTION.GET_PRODUCT_DETAIL),

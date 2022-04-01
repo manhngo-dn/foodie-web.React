@@ -7,11 +7,14 @@ function* getShopDetailSaga(action) {
   try {
     const { id } = action.payload;
 
-    const result = yield axios.get(`http://localhost:4000/shops?id=${id}`, {
-      params: {
-        _embed: "favorites",
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/shops?id=${id}`,
+      {
+        params: {
+          _embed: "favorites",
+        },
+      }
+    );
     if (result.data.length === 1) {
       const data = result.data[0];
       yield put({

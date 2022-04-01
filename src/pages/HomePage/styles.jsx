@@ -162,7 +162,6 @@ export const AppContainer = styled.div`
 export const AppContent = styled.div`
   font-size: 16px;
   color: #8e8e8e;
-  padding-right: 200px;
 `;
 
 export const AppImage = styled.img`

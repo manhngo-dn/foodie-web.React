@@ -930,10 +930,10 @@
   "users": [
     {
       "email": "manh@gmail.com",
-      "password": "$2a$10$0rVkKNB8QEEoL7Zo.iJfyuWw6ayQ6C3ObbPE/1KFfSA6BXvjXeXgS",
+      "password": "$2a$10$iYBltAscooeflAhV7B/0O.tMADY7PFPzx0jfYapIFrd5Gv81u0ryS",
       "fullName": "manh1",
       "createdAt": 1647275278063,
-      "updatedAt": 1647966188334,
+      "updatedAt": 1648806712360,
       "id": 1,
       "location": {
         "city": {
@@ -4307,149 +4307,13 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "content": "comment 1",
-      "shopId": 1,
+      "content": "rất tốt",
+      "rate": 4.5,
+      "shopId": "1",
       "userId": 1,
-      "rate": 5
-    },
-    {
-      "id": 2,
-      "content": "comment 2",
-      "shopId": 1,
-      "userId": 2,
-      "rate": 5
-    },
-    {
-      "id": 3,
-      "content": "comment 3",
-      "shopId": 1,
-      "userId": 3,
-      "rate": 5
-    },
-    {
-      "id": 4,
-      "content": "comment 4",
-      "shopId": 1,
-      "userId": 4,
-      "rate": 5
-    },
-    {
-      "createdAt": 1648142029713,
-      "updatedAt": 1648142029713,
-      "id": 5
-    },
-    {
-      "createdAt": 1648142097745,
-      "updatedAt": 1648142097745,
-      "id": 6
-    },
-    {
-      "createdAt": 1648142135456,
-      "updatedAt": 1648142135456,
-      "id": 7
-    },
-    {
-      "createdAt": 1648142327935,
-      "updatedAt": 1648142327935,
-      "id": 8
-    },
-    {
-      "createdAt": 1648142474734,
-      "updatedAt": 1648142474734,
-      "id": 9
-    },
-    {
-      "createdAt": 1648142592661,
-      "updatedAt": 1648142592661,
-      "id": 10
-    },
-    {
-      "createdAt": 1648142774486,
-      "updatedAt": 1648142774486,
-      "id": 11
-    },
-    {
-      "createdAt": 1648142807590,
-      "updatedAt": 1648142807590,
-      "id": 12
-    },
-    {
-      "createdAt": 1648143081606,
-      "updatedAt": 1648143081606,
-      "id": 13
-    },
-    {
-      "content": "12312312",
-      "rate": 2.5,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143219038,
-      "updatedAt": 1648143219038,
-      "id": 14
-    },
-    {
-      "content": "12314556",
-      "rate": 1.5,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143264298,
-      "updatedAt": 1648143264298,
-      "id": 15
-    },
-    {
-      "content": "1231231",
-      "rate": 2,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143392261,
-      "updatedAt": 1648143392261,
-      "id": 16
-    },
-    {
-      "content": "qqqqqq",
-      "rate": 3,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143451174,
-      "updatedAt": 1648143451174,
-      "id": 17
-    },
-    {
-      "content": "11231231",
-      "rate": 2,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143547223,
-      "updatedAt": 1648143547223,
-      "id": 18
-    },
-    {
-      "content": "123123123",
-      "rate": 3.5,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648143952071,
-      "updatedAt": 1648143952071,
-      "id": 19
-    },
-    {
-      "content": "123123123123",
-      "rate": 2.5,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648144114191,
-      "updatedAt": 1648144114191,
-      "id": 20
-    },
-    {
-      "content": "123123123",
-      "rate": 2,
-      "shopId": "1",
-      "userId": 4,
-      "createdAt": 1648144154204,
-      "updatedAt": 1648144154204,
-      "id": 21
+      "createdAt": 1648809136083,
+      "updatedAt": 1648809136083,
+      "id": 1
     }
   ],
   "cities": [

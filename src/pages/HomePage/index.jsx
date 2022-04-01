@@ -44,7 +44,7 @@ const Home = () => {
   const renderTopShopList = useMemo(() => {
     if (topShopList.loading) return <Skeleton />;
     return topShopList.data.shops?.map((shop) => (
-      <Col span={8} key={shop.id}>
+      <Col lg={{ span: 8 }} sm={{ span: 12 }} xs={{ span: 24 }} key={shop.id}>
         <Card
           size="small"
           hoverable
@@ -65,7 +65,7 @@ const Home = () => {
   const renderNewShopList = useMemo(() => {
     if (newShopList.loading) return <Skeleton />;
     return newShopList.data.shops?.map((shop) => (
-      <Col span={8} key={shop.id}>
+      <Col lg={{ span: 8 }} sm={{ span: 12 }} xs={{ span: 24 }} key={shop.id}>
         <Card
           size="small"
           hoverable
@@ -149,8 +149,6 @@ const Home = () => {
           <p>
             Đăng ký tham gia: <a href="#">tại đây</a>
           </p>
-
-          <S.AppImage alt="app" src="http://localhost:3000/app-tutorial.png" />
         </S.AppContent>
       </S.AppContainer>
       <Footer />

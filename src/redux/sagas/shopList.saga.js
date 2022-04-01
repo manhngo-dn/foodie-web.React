@@ -6,16 +6,21 @@ import { REQUEST, SUCCESS, FAIL, SHOP_LIST_ACTION } from "../constants";
 function* getCategoryListSaga(action) {
   try {
     const { path } = action.payload;
-    const serviceList = yield axios.get(`http://localhost:4000/services`);
+    const serviceList = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/services`
+    );
     const serviceId = serviceList.data.find(
       (service) => service.path === path
     ).id;
 
-    const result = yield axios.get("http://localhost:4000/categories?", {
-      params: {
-        serviceId: serviceId,
-      },
-    });
+    const result = yield axios.get(
+      "https://foodie-web-delivery-api.herokuapp.com/categories?",
+      {
+        params: {
+          serviceId: serviceId,
+        },
+      }
+    );
     yield put({
       type: SUCCESS(SHOP_LIST_ACTION.GET_CATEGORY_LIST),
       payload: {
@@ -34,20 +39,25 @@ function* getShopListSaga(action) {
   try {
     const { page, limit, categoryIds, keyword, path } = action.payload;
 
-    const serviceList = yield axios.get(`http://localhost:4000/services`);
+    const serviceList = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/services`
+    );
     const serviceId = serviceList.data.find(
       (service) => service.path === path
     ).id;
 
-    const result = yield axios.get("http://localhost:4000/shops", {
-      params: {
-        serviceId: serviceId,
-        categoryId: categoryIds,
-        q: keyword,
-        _limit: limit,
-        _page: page,
-      },
-    });
+    const result = yield axios.get(
+      "https://foodie-web-delivery-api.herokuapp.com/shops",
+      {
+        params: {
+          serviceId: serviceId,
+          categoryId: categoryIds,
+          q: keyword,
+          _limit: limit,
+          _page: page,
+        },
+      }
+    );
     yield put({
       type: SUCCESS(SHOP_LIST_ACTION.GET_SHOP_LIST),
       payload: {
@@ -69,11 +79,14 @@ function* getShopListSaga(action) {
 
 function* getTopShopListSaga(action) {
   try {
-    const result = yield axios.get("http://localhost:4000/tops", {
-      params: {
-        _embed: "shops",
-      },
-    });
+    const result = yield axios.get(
+      "https://foodie-web-delivery-api.herokuapp.com/tops",
+      {
+        params: {
+          _embed: "shops",
+        },
+      }
+    );
     yield put({
       type: SUCCESS(SHOP_LIST_ACTION.GET_TOP_SHOP_LIST),
       payload: {
@@ -90,11 +103,14 @@ function* getTopShopListSaga(action) {
 
 function* getNewShopListSaga(action) {
   try {
-    const result = yield axios.get("http://localhost:4000/news", {
-      params: {
-        _embed: "shops",
-      },
-    });
+    const result = yield axios.get(
+      "https://foodie-web-delivery-api.herokuapp.com/news",
+      {
+        params: {
+          _embed: "shops",
+        },
+      }
+    );
     yield put({
       type: SUCCESS(SHOP_LIST_ACTION.GET_NEW_SHOP_LIST),
       payload: {

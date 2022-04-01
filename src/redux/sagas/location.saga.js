@@ -5,7 +5,9 @@ import { REQUEST, SUCCESS, FAIL, LOCATION_ACTION } from "../constants";
 
 function* getCityListSaga(action) {
   try {
-    const result = yield axios.get(`http://localhost:4000/cities`);
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/cities`
+    );
 
     yield put({
       type: SUCCESS(LOCATION_ACTION.GET_CITY_LIST),
@@ -24,11 +26,14 @@ function* getCityListSaga(action) {
 function* getDistrictListSaga(action) {
   const { cityCode } = action.payload;
   try {
-    const result = yield axios.get(`http://localhost:4000/districts`, {
-      params: {
-        parentcode: cityCode,
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/districts`,
+      {
+        params: {
+          parentcode: cityCode,
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(LOCATION_ACTION.GET_DISTRICT_LIST),
@@ -47,11 +52,14 @@ function* getDistrictListSaga(action) {
 function* getWardListSaga(action) {
   const { districtCode } = action.payload;
   try {
-    const result = yield axios.get(`http://localhost:4000/wards`, {
-      params: {
-        parentcode: districtCode,
-      },
-    });
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/wards`,
+      {
+        params: {
+          parentcode: districtCode,
+        },
+      }
+    );
 
     yield put({
       type: SUCCESS(LOCATION_ACTION.GET_WARD_LIST),

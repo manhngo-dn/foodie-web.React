@@ -5,7 +5,9 @@ import { REQUEST, SUCCESS, FAIL, SERVICE_ACTION } from "../constants";
 
 function* getServiceListSaga(action) {
   try {
-    const result = yield axios.get(`http://localhost:4000/services`);
+    const result = yield axios.get(
+      `https://foodie-web-delivery-api.herokuapp.com/services`
+    );
 
     yield put({
       type: SUCCESS(SERVICE_ACTION.GET_SERVICE_LIST),
