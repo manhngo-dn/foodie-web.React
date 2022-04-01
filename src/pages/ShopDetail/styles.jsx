@@ -173,14 +173,18 @@ export const BillContainer = styled.div`
 
 export const CommentContainer = styled.div`
   border: 1px solid #ebebeb;
-  border-radius: 6px;
-  margin: 10px 0;
+  border-radius: 4px;
+  margin-bottom: 12px;
   padding: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const UserNameComment = styled.div`
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
 `;
 
 export const CommentTime = styled.div`

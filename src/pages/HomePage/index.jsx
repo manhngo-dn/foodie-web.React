@@ -96,7 +96,7 @@ const Home = () => {
               style={{ height: "100%" }}
             >
               <Col span={10}>
-                <S.MainBannerTitle>Giao hàng chỉ từ 20'</S.MainBannerTitle>
+                <S.MainBannerTitle>Giao hàng chỉ từ 20 phút</S.MainBannerTitle>
                 <S.ServiceButtonGroup>
                   {renderServiceListButton()}
                 </S.ServiceButtonGroup>
