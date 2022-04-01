@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Space, Tabs } from "antd";
+import React, { useEffect, useState } from "react";
+import { Space, Tabs, Avatar } from "antd";
 import {
   UserOutlined,
   ShoppingCartOutlined,
   LockOutlined,
   AimOutlined,
 } from "@ant-design/icons";
-import { FaUserAlt } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 
 import * as S from "./styles";
@@ -18,29 +17,39 @@ import ChangePasswordTab from "./components/ChangePasswordTab";
 import ChangeLocationTab from "./components/ChangeLocationTab";
 import PurchaseHistoryTab from "./components/PurchaseHistoryTab";
 
+import { changeBreadcrumbAction } from "../../redux/actions";
+
 const UserInfoPage = () => {
   const [activeKey, setActiveKey] = useState("1");
+
   const { userInfo } = useSelector((state) => state.userReducer);
+  const dispatch = useDispatch();
 
   const accessToken = localStorage.getItem("accessToken");
-  if (!accessToken) return <Navigate to={ROUTERS.HOME} />;
 
+  useEffect(() => {
+    dispatch(
+      changeBreadcrumbAction([
+        { name: "Trang chủ", path: ROUTERS.HOME },
+        { name: "Thông tin cá nhân" },
+      ])
+    );
+  }, []);
+
+  if (!accessToken) return <Navigate to={ROUTERS.HOME} />;
   return (
     <S.Wrapper>
       <S.UserName>
-        <FaUserAlt
-          style={{
-            width: "2em",
-            height: "2em",
-            marginRight: "15px",
-          }}
-        />
-        {userInfo.data.fullName}
+        <Space>
+          <Avatar
+            style={{ backgroundColor: "#ee4d2d" }}
+            icon={<UserOutlined />}
+          />
+          <h3>{userInfo.data.fullName}</h3>
+        </Space>
       </S.UserName>
       <Tabs
-        onChange={(key) => {
-          setActiveKey(key);
-        }}
+        onChange={(key) => setActiveKey(key)}
         tabPosition={"left"}
         size={"large"}
         tabBarStyle={{ width: "25%" }}
@@ -53,7 +62,7 @@ const UserInfoPage = () => {
           }
           key="1"
         >
-          <ChangeUserInfoTab activeKey />
+          <ChangeUserInfoTab activeKey={activeKey} />
         </Tabs.TabPane>
 
         <Tabs.TabPane
@@ -64,7 +73,7 @@ const UserInfoPage = () => {
           }
           key="2"
         >
-          <ChangePasswordTab activeKey />
+          <ChangePasswordTab activeKey={activeKey} />
         </Tabs.TabPane>
 
         <Tabs.TabPane
@@ -75,7 +84,7 @@ const UserInfoPage = () => {
           }
           key="3"
         >
-          <ChangeLocationTab activeKey />
+          <ChangeLocationTab activeKey={activeKey} />
         </Tabs.TabPane>
 
         <Tabs.TabPane
@@ -86,7 +95,7 @@ const UserInfoPage = () => {
           }
           key="4"
         >
-          <PurchaseHistoryTab activeKey />
+          <PurchaseHistoryTab activeKey={activeKey} />
         </Tabs.TabPane>
       </Tabs>
     </S.Wrapper>

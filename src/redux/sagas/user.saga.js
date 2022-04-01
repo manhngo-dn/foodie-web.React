@@ -73,15 +73,12 @@ function* getUserInfoSaga(action) {
 function* updateUserInfoSaga(action) {
   try {
     const { id, location, fullName, email, phoneNumber } = action.payload;
-    yield axios.patch(`http://localhost:4000/users/${id}`, {
+    const result = yield axios.patch(`http://localhost:4000/users/${id}`, {
       location: location,
       fullName: fullName,
       email: email,
       phoneNumber: phoneNumber,
     });
-
-    const result = yield axios.get(`http://localhost:4000/users/${id}`);
-
     yield put({
       type: SUCCESS(USER_ACTION.GET_USER_INFO),
       payload: {
@@ -98,9 +95,37 @@ function* updateUserInfoSaga(action) {
   }
 }
 
+function* changePasswordSaga(action) {
+  try {
+    const { id, data, callback } = action.payload;
+    yield axios.post("http://localhost:4000/login", {
+      email: data.email,
+      password: data.oldPassword,
+    });
+    yield axios.patch(`http://localhost:4000/users/${id}`, {
+      password: data.newPassword,
+    });
+    if (callback?.clearForm) {
+      yield callback.clearForm();
+    }
+    yield put({
+      type: SUCCESS(USER_ACTION.CHANGE_PASSWORD),
+    });
+    message.success("Đổi mật khẩu thành công");
+  } catch (error) {
+    yield put({
+      type: FAIL(USER_ACTION.CHANGE_PASSWORD),
+      payload: {
+        errors: "Mật khẩu cũ không đúng",
+      },
+    });
+  }
+}
+
 export default function* userSaga() {
   yield takeEvery(REQUEST(USER_ACTION.SIGN_IN), signInSaga);
   yield takeEvery(REQUEST(USER_ACTION.SIGN_UP), signUpSaga);
   yield takeEvery(REQUEST(USER_ACTION.GET_USER_INFO), getUserInfoSaga);
   yield takeEvery(REQUEST(USER_ACTION.UPDATE_USER_INFO), updateUserInfoSaga);
+  yield takeEvery(REQUEST(USER_ACTION.CHANGE_PASSWORD), changePasswordSaga);
 }

@@ -1,33 +1,31 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  padding-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 372px;
-  width: 1200px;
+  padding: 16px;
+  margin: 0 auto;
+  min-height: 372px;
+  max-width: 1200px;
   display: block;
   background-color: #f2f2f2;
 `;
 
 export const FooterBlock = styled.div`
-  width: 20%;
   display: block;
-  float: left;
 `;
 
 export const MiddleFooterBlock = styled.div`
-  width: 20%;
   display: block;
-  float: left;
   text-align: center;
   color: #959595;
   line-height: 4;
+
+  @media (max-width: 992px) {
+    text-align: right;
+  }
 `;
 
 export const LastFooterBlock = styled.div`
   display: block;
-  float: right;
   text-align: right;
 `;
 

@@ -25,7 +25,6 @@ const Home = () => {
   const { topShopList, newShopList } = useSelector(
     (state) => state.shopListReducer
   );
-  console.log(newShopList.data);
 
   const renderServiceListButton = () => {
     return serviceList.data.map((service) => {

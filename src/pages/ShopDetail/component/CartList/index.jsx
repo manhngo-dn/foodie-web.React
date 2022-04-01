@@ -201,12 +201,17 @@ const CartList = () => {
 
   return (
     <S.CartListContainer>
-      <Row justify="space-around" align="middle">
+      <Row justify="space-between" align="middle">
         <Col>
           <S.CartListHeading>Đơn hàng hiện tại</S.CartListHeading>
         </Col>
         <Col>
-          <Button danger size="small" onClick={() => handleClearCart()}>
+          <Button
+            danger
+            size="small"
+            onClick={() => handleClearCart()}
+            style={{ marginRight: 10 }}
+          >
             Xóa toàn bộ
           </Button>
         </Col>

@@ -5,9 +5,9 @@ export const CartListContainer = styled.div`
 `;
 export const CartListHeading = styled.div`
   width: 100%;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
-  padding: 6px 10px;
+  padding: 6px 4px 6px 10px;
   color: #cf2127;
 `;
 
@@ -54,7 +54,7 @@ export const ExtraFee = styled.div`
 
 export const PaymentButton = styled.div`
   width: 100%;
-  padding: 6px 10px;
+  padding: 6px 10px 10px;
 `;
 
 export const TotalPrice = styled.div`

@@ -13,7 +13,7 @@ export const HeadingText = styled.div`
   width: 100%;
   font-size: 18px;
   font-weight: 700;
-  padding: 20px;
+  padding: 16px;
   background-color: #f5f5f5;
   border: 1px solid #ebebeb;
 `;

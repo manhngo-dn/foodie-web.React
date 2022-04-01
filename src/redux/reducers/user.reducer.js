@@ -16,6 +16,10 @@ const initialState = {
     loading: false,
     errors: null,
   },
+  changePasswordData: {
+    loading: false,
+    errors: null,
+  },
 };
 
 const userReducer = createReducer(initialState, {
@@ -114,14 +118,12 @@ const userReducer = createReducer(initialState, {
       },
     };
   },
-
   [FAIL(USER_ACTION.GET_USER_INFO)]: (state, action) => {
     const { errors } = action.payload;
     return {
       ...state,
-
-      signUpData: {
-        ...state.signInData,
+      userInfo: {
+        ...state.userInfo,
         loading: false,
         errors,
       },
@@ -135,6 +137,37 @@ const userReducer = createReducer(initialState, {
         data: {},
         loading: false,
         errors: null,
+      },
+    };
+  },
+
+  [REQUEST(USER_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    return {
+      ...state,
+      changePasswordData: {
+        ...state.changePasswordData,
+        loading: true,
+      },
+    };
+  },
+  [SUCCESS(USER_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    return {
+      ...state,
+      changePasswordData: {
+        ...state.changePasswordData,
+        loading: false,
+        errors: null,
+      },
+    };
+  },
+  [FAIL(USER_ACTION.CHANGE_PASSWORD)]: (state, action) => {
+    const { errors } = action.payload;
+    return {
+      ...state,
+      changePasswordData: {
+        ...state.changePasswordData,
+        loading: false,
+        errors,
       },
     };
   },

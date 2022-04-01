@@ -19,6 +19,7 @@ export const NavFilter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 15px;
 
   clear: both;
@@ -29,8 +30,8 @@ export const ListFilter = styled.div`
 `;
 
 export const CategoryButton = styled.span`
-  padding: 0 5px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: 2px;
   text-align: center;
   background-color: #fff2e8;
   border: 1px solid #f5c9b9;
@@ -44,8 +45,8 @@ export const CategoryButton = styled.span`
 `;
 
 export const ActivatedCategoryButton = styled.span`
-  padding: 0 5px;
-  border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: 2px;
   text-align: center;
   color: #fff;
   background-color: #f5c9b9;
@@ -55,14 +56,27 @@ export const ActivatedCategoryButton = styled.span`
 `;
 
 export const CategoryDropdown = styled.div`
-  width: 800px;
+  width: 700px;
   padding: 20px;
   background-color: #fff;
   border-radius: 4px;
+
+  @media (max-width: 768px) {
+    width: 500px;
+  }
+
+  @media (max-width: 550px) {
+    width: 280px;
+  }
 `;
 
 export const SearchButton = styled.div`
-  padding-left: 40px;
+  width: calc(100% - 136px);
+
+  @media (max-width: 375px) {
+    width: 100%;
+    margin-top: 8px;
+  }
 `;
 
 export const ShopsListContainer = styled.div`

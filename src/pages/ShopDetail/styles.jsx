@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  padding-top: 30px;
-`;
+export const Container = styled.div``;
 
 export const ShopDetail = styled.div`
   padding-bottom: 10px;
@@ -12,7 +10,6 @@ export const ShopDetail = styled.div`
 export const ShopDetailInfo = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
 `;
 
 export const ShopImage = styled.img`
@@ -36,19 +33,22 @@ export const ShopName = styled.div`
 `;
 
 export const ShopAddress = styled.div`
-  font-size: 14px;
+  font-size: 15px;
 `;
 
 export const ShopActiveTime = styled.div`
-  font-size: 16px;
+  font-size: 15px;
 `;
 
 export const MenuTab = styled.div`
   font-size: 16px;
   font-weight: 700;
   color: #cf2127;
+  padding: 12px 24px 0;
 
-  padding: 13px 26px;
+  @media (max-width: 1200px) {
+    padding: 0 16px;
+  }
 `;
 
 export const MenuCategoryList = styled.div`
@@ -58,7 +58,7 @@ export const MenuCategoryList = styled.div`
   border: 1px solid #ebebeb;
   padding: 10px;
   position: sticky;
-  top: 70px;
+  top: 86px;
   display: flex;
   flex-direction: column;
 `;
@@ -84,6 +84,7 @@ export const ProductList = styled.div`
 
 export const MenuCategory = styled.div`
   width: 100%;
+  margin-bottom: 16px;
 `;
 
 export const MenuCategoryName = styled.div`
@@ -163,7 +164,11 @@ export const BillContainer = styled.div`
   border-radius: 4px;
   border: 1px solid #ebebeb;
   position: sticky;
-  top: 70px;
+  top: 86px;
+
+  @media (max-width: 1200px) {
+    margin-top: 16px;
+  }
 `;
 
 export const CommentContainer = styled.div`
@@ -191,7 +196,7 @@ export const Rate = styled.div`
   text-align: start;
 `;
 
-export const favorites = styled.span`
+export const Favorites = styled.span`
   font-size: 16px;
   color: #ee4d2d;
 `;

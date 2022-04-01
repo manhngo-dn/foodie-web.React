@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Row, Col, Image } from "antd";
+import { Row, Col, Image, Space } from "antd";
 
 import * as S from "./styles";
 import { addToCartAction } from "../../../../redux/actions";
@@ -21,42 +21,38 @@ const ProductItem = ({ product, shopId }) => {
 
   return (
     <S.ProductItem>
-      <Row gutter={16} align={"center"}>
-        <Col span={4}>
+      <Row gutter={16} align="middle">
+        <Col span={4} style={{ textAlign: "left" }}>
           <Image src={product.image} width={60} />
         </Col>
-        <Col span={12}>
+        <Col span={14} style={{ textAlign: "left" }}>
           <S.ProductName>{product.name}</S.ProductName>
           <S.ProductContent>{product.description}</S.ProductContent>
         </Col>
-        <Col span={8}>
-          <Row gutter={16} align={"middle"} justify={"center"}>
-            <Col>
-              {product.initialPrice === product.currentPrice ? (
+        <Col span={6} style={{ textAlign: "right" }}>
+          <Space>
+            {product.initialPrice === product.currentPrice ? (
+              <S.ProductCurrentPrice>
+                {product.currentPrice.toLocaleString()}₫
+              </S.ProductCurrentPrice>
+            ) : (
+              <>
+                <S.ProductInitialPrice>
+                  {product.initialPrice.toLocaleString()}₫
+                </S.ProductInitialPrice>
                 <S.ProductCurrentPrice>
                   {product.currentPrice.toLocaleString()}₫
                 </S.ProductCurrentPrice>
-              ) : (
-                <>
-                  <S.ProductInitialPrice>
-                    {product.initialPrice.toLocaleString()}₫
-                  </S.ProductInitialPrice>
-                  <S.ProductCurrentPrice>
-                    {product.currentPrice.toLocaleString()}₫
-                  </S.ProductCurrentPrice>
-                </>
-              )}
-            </Col>
-            <Col>
-              {product.max === 0 ? (
-                <S.ProductQuantity>het hang</S.ProductQuantity>
-              ) : (
-                <S.ProductAddToCart onClick={() => handleAddToCart()}>
-                  +
-                </S.ProductAddToCart>
-              )}
-            </Col>
-          </Row>
+              </>
+            )}
+            {product.max === 0 ? (
+              <S.ProductQuantity>Hết</S.ProductQuantity>
+            ) : (
+              <S.ProductAddToCart onClick={() => handleAddToCart()}>
+                +
+              </S.ProductAddToCart>
+            )}
+          </Space>
         </Col>
       </Row>
     </S.ProductItem>

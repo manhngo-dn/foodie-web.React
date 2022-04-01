@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Tabs, Form, Input, Button } from "antd";
+import { Tabs, Form, Input, Button, Row, Col } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined, HomeOutlined } from "@ant-design/icons";
@@ -82,149 +82,159 @@ const LoginPage = () => {
 
   return (
     <S.LoginPageContent>
-      <img src={banner} alt="banner" />
-      <S.LoginForm>
-        <Tabs
-          centered={true}
-          size="large"
-          activeKey={activeKey}
-          onChange={(key) => {
-            setActiveKey(key);
-          }}
-        >
-          <Tabs.TabPane tab="Đăng nhập" key="signIn">
-            <Form
-              form={signInForm}
-              name="signInForm"
-              layout="vertical"
-              initialValues={{ remember: true }}
-              autoComplete="off"
-              onFinish={(values) => {
-                handleSignIn(values);
+      <Row gutter={[16, 16]} align="middle">
+        <Col xl={16} lg={14} md={12} sm={10} xs={24}>
+          <img src={banner} alt="banner" width="100%" height="auto" />
+        </Col>
+        <Col xl={8} lg={10} md={12} sm={14} xs={24}>
+          <S.LoginForm>
+            <Tabs
+              centered={true}
+              size="large"
+              activeKey={activeKey}
+              onChange={(key) => {
+                setActiveKey(key);
               }}
-              style={{ padding: "0 2px" }}
             >
-              <Form.Item
-                name="email"
-                rules={[
-                  { required: true, message: "Vui lòng nhập email!" },
-                  { type: "email", message: "Email không hợp lệ" },
-                ]}
-              >
-                <Input
-                  prefix={<UserOutlined className="site-form-item-icon" />}
-                  type="email"
-                  placeholder="Email"
-                />
-              </Form.Item>
-              <Form.Item
-                name="password"
-                rules={[{ required: true, message: "Vui lòng nhập mật khẩu!" }]}
-              >
-                <Input
-                  prefix={<LockOutlined className="site-form-item-icon" />}
-                  type="password"
-                  placeholder="Mật khẩu"
-                />
-              </Form.Item>
-
-              <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="login-form-button"
-                  block
+              <Tabs.TabPane tab="Đăng nhập" key="signIn">
+                <Form
+                  form={signInForm}
+                  name="signInForm"
+                  layout="vertical"
+                  initialValues={{ remember: true }}
+                  autoComplete="off"
+                  onFinish={(values) => {
+                    handleSignIn(values);
+                  }}
+                  style={{ padding: "0 2px" }}
                 >
-                  Đăng nhập
-                </Button>
-              </Form.Item>
-            </Form>
-          </Tabs.TabPane>
-          <Tabs.TabPane tab="Đăng ký" key="signUp">
-            <Form
-              form={signUpForm}
-              name="signUpForm"
-              layout="vertical"
-              initialValues={{ remember: true }}
-              autoComplete="off"
-              onFinish={(values) => {
-                handleSignUp(values);
-              }}
-              style={{ padding: "0 2px" }}
-            >
-              <Form.Item
-                label="Họ và tên"
-                name="fullName"
-                rules={[
-                  { required: true, message: "Vui lòng nhập họ và tên!" },
-                ]}
-              >
-                <Input />
-              </Form.Item>
+                  <Form.Item
+                    name="email"
+                    rules={[
+                      { required: true, message: "Vui lòng nhập email!" },
+                      { type: "email", message: "Email không hợp lệ" },
+                    ]}
+                  >
+                    <Input
+                      prefix={<UserOutlined className="site-form-item-icon" />}
+                      type="email"
+                      placeholder="Email"
+                    />
+                  </Form.Item>
+                  <Form.Item
+                    name="password"
+                    rules={[
+                      { required: true, message: "Vui lòng nhập mật khẩu!" },
+                    ]}
+                  >
+                    <Input
+                      prefix={<LockOutlined className="site-form-item-icon" />}
+                      type="password"
+                      placeholder="Mật khẩu"
+                    />
+                  </Form.Item>
 
-              <Form.Item
-                label="Email"
-                name="email"
-                rules={[
-                  { required: true, message: "Vui lòng nhập email!" },
-                  { type: "email", message: "Email không hợp lệ" },
-                ]}
-              >
-                <Input />
-              </Form.Item>
-              <Form.Item
-                label="Mật khẩu"
-                name="password"
-                rules={[{ required: true, message: "Vui lòng nhập mật khẩu!" }]}
-              >
-                <Input type="password" placeholder="Mật khẩu" />
-              </Form.Item>
-
-              <Form.Item
-                name="confirm"
-                label="Xác nhận mật khẩu"
-                dependencies={["password"]}
-                hasFeedback
-                rules={[
-                  {
-                    required: true,
-                    message: "Vui lòng xác nhận mật khẩu!",
-                  },
-                  ({ getFieldValue }) => ({
-                    validator(_, value) {
-                      if (!value || getFieldValue("password") === value) {
-                        return Promise.resolve();
-                      }
-                      return Promise.reject(
-                        new Error(
-                          "Hai mật khẩu không khớp nhau, vui lòng nhập lại!"
-                        )
-                      );
-                    },
-                  }),
-                ]}
-              >
-                <Input.Password />
-              </Form.Item>
-
-              <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="login-form-button"
-                  block
-                  loading={signUpData.loading}
+                  <Form.Item>
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      className="login-form-button"
+                      block
+                    >
+                      Đăng nhập
+                    </Button>
+                  </Form.Item>
+                </Form>
+              </Tabs.TabPane>
+              <Tabs.TabPane tab="Đăng ký" key="signUp">
+                <Form
+                  form={signUpForm}
+                  name="signUpForm"
+                  layout="vertical"
+                  initialValues={{ remember: true }}
+                  autoComplete="off"
+                  onFinish={(values) => {
+                    handleSignUp(values);
+                  }}
+                  style={{ padding: "0 2px" }}
                 >
-                  Đăng ký
-                </Button>
-              </Form.Item>
-            </Form>
-          </Tabs.TabPane>
-        </Tabs>
-        <S.BackToHome onClick={() => navigate(ROUTERS.HOME)}>
-          <HomeOutlined /> Quay lại trang chủ
-        </S.BackToHome>
-      </S.LoginForm>
+                  <Form.Item
+                    label="Họ và tên"
+                    name="fullName"
+                    rules={[
+                      { required: true, message: "Vui lòng nhập họ và tên!" },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+
+                  <Form.Item
+                    label="Email"
+                    name="email"
+                    rules={[
+                      { required: true, message: "Vui lòng nhập email!" },
+                      { type: "email", message: "Email không hợp lệ" },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+                  <Form.Item
+                    label="Mật khẩu"
+                    name="password"
+                    rules={[
+                      { required: true, message: "Vui lòng nhập mật khẩu!" },
+                    ]}
+                  >
+                    <Input type="password" placeholder="Mật khẩu" />
+                  </Form.Item>
+
+                  <Form.Item
+                    name="confirm"
+                    label="Xác nhận mật khẩu"
+                    dependencies={["password"]}
+                    hasFeedback
+                    rules={[
+                      {
+                        required: true,
+                        message: "Vui lòng xác nhận mật khẩu!",
+                      },
+                      ({ getFieldValue }) => ({
+                        validator(_, value) {
+                          if (!value || getFieldValue("password") === value) {
+                            return Promise.resolve();
+                          }
+                          return Promise.reject(
+                            new Error(
+                              "Hai mật khẩu không khớp nhau, vui lòng nhập lại!"
+                            )
+                          );
+                        },
+                      }),
+                    ]}
+                  >
+                    <Input.Password />
+                  </Form.Item>
+
+                  <Form.Item>
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      className="login-form-button"
+                      block
+                      loading={signUpData.loading}
+                    >
+                      Đăng ký
+                    </Button>
+                  </Form.Item>
+                </Form>
+              </Tabs.TabPane>
+            </Tabs>
+            <S.BackToHome onClick={() => navigate(ROUTERS.HOME)}>
+              <HomeOutlined /> Quay lại trang chủ
+            </S.BackToHome>
+          </S.LoginForm>
+        </Col>
+      </Row>
     </S.LoginPageContent>
   );
 };

@@ -13,6 +13,7 @@ import {
   Form,
   Input,
   Rate,
+  Card,
   notification,
 } from "antd";
 import {
@@ -20,10 +21,12 @@ import {
   UserOutlined,
   HeartOutlined,
   ClockCircleOutlined,
+  EnvironmentOutlined,
 } from "@ant-design/icons";
 
 import moment from "moment";
 
+import { ROUTERS } from "../../constants/routers";
 import {
   getShopDetailAction,
   getProductDetailAction,
@@ -32,6 +35,7 @@ import {
   sendCommentAction,
   addToFavoriteAction,
   removeFromFavoriteAction,
+  changeBreadcrumbAction,
 } from "../../redux/actions";
 import ProductItem from "./component/ProductItem";
 import CartList from "./component/CartList";
@@ -67,7 +71,21 @@ const ShopDetail = () => {
     dispatch(getProductDetailAction({ id }));
     dispatch(getMenuAction({ id }));
     dispatch(getCommentListAction({ shopId: id }));
-  }, []);
+  }, [id]);
+
+  useEffect(() => {
+    if (shopDetail.data.id) {
+      dispatch(
+        changeBreadcrumbAction([
+          { name: "Trang chủ", path: ROUTERS.HOME },
+          {
+            name: shopDetail.data.name,
+            noTitle: true,
+          },
+        ])
+      );
+    }
+  }, [shopDetail.data]);
 
   const { Link } = Anchor;
   const renderMenuCategoryList = () => {
@@ -147,8 +165,6 @@ const ShopDetail = () => {
         shopId: parseFloat(id),
       })
     );
-
-    console.log(favoriteId);
   };
 
   const renderCommentList = () => {
@@ -215,23 +231,20 @@ const ShopDetail = () => {
         <Skeleton active />
       ) : (
         <S.Container>
-          <S.ShopDetail>
-            <Row gutter={[48, 16]} wrap={false}>
-              <Col flex="none">
+          <Card size="small">
+            <Row gutter={[16, 16]}>
+              <Col xl={10} md={12} xs={24}>
                 <Image
-                  width={480}
-                  height={300}
+                  width="100%"
+                  height="auto"
                   src={shopDetail.data.image}
                   alt="ada"
                 />
               </Col>
-              <Col flex="auto">
+              <Col xl={14} md={12} xs={24}>
                 <S.ShopDetailInfo>
                   <Space direction="vertical">
-                    <S.ShopName title={shopDetail.data.name}>
-                      {shopDetail.data.name}
-                    </S.ShopName>
-                    <div>
+                    <Space>
                       <Rate
                         disabled
                         style={{ color: "#ee4d2d" }}
@@ -241,17 +254,23 @@ const ShopDetail = () => {
                             : 0
                         }
                       />
-                      <S.favorites>
+                      {`${commentList.data?.length} lượt đánh giá`}
+                    </Space>
+                    <div>
+                      <S.Favorites>
                         {`${shopDetail.data.favorites?.length} người đã thích`}
-                      </S.favorites>
+                      </S.Favorites>
                     </div>
 
                     <S.ShopKind>{shopDetail.data.kind}</S.ShopKind>
-                    <S.ShopAddress>{shopDetail.data.address}</S.ShopAddress>
-                    <S.ShopActiveTime>
-                      <ClockCircleOutlined /> {shopDetail.data.openTime} -{" "}
-                      {shopDetail.data.closeTime}
-                    </S.ShopActiveTime>
+                    <Space>
+                      <EnvironmentOutlined />
+                      <S.ShopAddress>{shopDetail.data.address}</S.ShopAddress>
+                    </Space>
+                    <Space>
+                      <ClockCircleOutlined />
+                      <S.ShopActiveTime>{`${shopDetail.data.openTime} - ${shopDetail.data.closeTime}`}</S.ShopActiveTime>
+                    </Space>
                     <Space>
                       {renderFavoriteButton()}
                       <Button
@@ -266,20 +285,39 @@ const ShopDetail = () => {
                 </S.ShopDetailInfo>
               </Col>
             </Row>
-          </S.ShopDetail>
-          <S.MenuTab>MENU</S.MenuTab>
-          <Row gutter={16}>
-            <Col span={5}>
+          </Card>
+
+          <Row gutter={[16, 16]}>
+            <Col
+              xl={{ span: 24, order: 1 }}
+              md={{ span: 24, order: 2 }}
+              xs={{ span: 24, order: 2 }}
+            >
+              <S.MenuTab>MENU</S.MenuTab>
+            </Col>
+            <Col
+              xl={{ span: 5, order: 2 }}
+              md={{ span: 8, order: 3 }}
+              xs={{ span: 24, order: 3 }}
+            >
               <S.MenuCategoryList>
                 <Anchor affix={false} offsetTop={70}>
                   {renderMenuCategoryList()}
                 </Anchor>
               </S.MenuCategoryList>
             </Col>
-            <Col span={13}>
+            <Col
+              xl={{ span: 13, order: 3 }}
+              md={{ span: 16, order: 4 }}
+              xs={{ span: 24, order: 4 }}
+            >
               <S.ProductList>{renderProductList()}</S.ProductList>
             </Col>
-            <Col span={6}>
+            <Col
+              xl={{ span: 6, order: 4 }}
+              md={{ span: 24, order: 1 }}
+              xs={{ span: 24, order: 1 }}
+            >
               <S.BillContainer>
                 <CartList />
               </S.BillContainer>

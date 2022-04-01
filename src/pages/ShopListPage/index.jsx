@@ -10,7 +10,6 @@ import {
   Tag,
   Input,
   Pagination,
-  Button,
 } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -21,16 +20,30 @@ import {
 } from "@ant-design/icons";
 
 import { PAGING } from "../../constants/paging";
+import { ROUTERS } from "../../constants/routers";
 import {
   getCategoryListAction,
   getShopListAction,
   getShopDetailAction,
+  changeBreadcrumbAction,
 } from "../../redux/actions";
 
 import * as S from "./styles";
 
+const SERVICE_LIST = {
+  [ROUTERS.FOOD]: "Đồ ăn",
+  [ROUTERS.FRESH]: "Thực phẩm",
+  [ROUTERS.LIQUOR]: "Bia",
+  [ROUTERS.FLOWERS]: "Hoa",
+  [ROUTERS.MARKETS]: "Siêu thị",
+  [ROUTERS.MEDICINE]: "Thuốc",
+  [ROUTERS.PETS]: "Thú cưng",
+};
+
 const ShopList = () => {
   const [activeButton, setActiveButton] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -68,6 +81,12 @@ const ShopList = () => {
       pathname,
     });
     setCurrentPage(1);
+    dispatch(
+      changeBreadcrumbAction([
+        { name: "Trang chủ", path: ROUTERS.HOME },
+        { name: SERVICE_LIST[pathname] },
+      ])
+    );
   }, [pathname]);
 
   const handleFilterCategory = (values) => {
@@ -147,7 +166,7 @@ const ShopList = () => {
     }));
 
     return categoryListOptions.map((category, index) => (
-      <Col span={6} key={index}>
+      <Col md={6} sm={8} xs={12} key={index}>
         <Checkbox value={category.value}>{category.label}</Checkbox>
       </Col>
     ));
@@ -201,7 +220,7 @@ const ShopList = () => {
   const renderShopList = useMemo(() => {
     if (shopList.loading) return <Skeleton />;
     return shopList.data.map((productItem, productIndex) => (
-      <Col span={6} key={productIndex}>
+      <Col lg={6} sm={8} xs={12} key={productIndex}>
         <Card
           size="small"
           hoverable
@@ -221,7 +240,6 @@ const ShopList = () => {
     ));
   }, [shopList]);
 
-  const [currentPage, setCurrentPage] = useState(1);
   const handleChangePage = (page) => {
     dispatch(
       getShopListAction({
@@ -261,6 +279,7 @@ const ShopList = () => {
             placement="bottomLeft"
             trigger={["click"]}
             onVisibleChange={() => setActiveButton(!activeButton)}
+            style={{ width: 120, marginRight: 16 }}
           >
             {activeButton ? (
               <S.ActivatedCategoryButton>
