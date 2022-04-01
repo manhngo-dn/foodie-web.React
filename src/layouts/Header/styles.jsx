@@ -50,7 +50,7 @@ export const Navbar = styled.div`
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  align-items: end;
+  align-items: flex-end;
 `;
 
 export const MainNavbar = styled.div`
@@ -58,7 +58,7 @@ export const MainNavbar = styled.div`
   flex-direction: row;
 
   height: 100%;
-  align-items: end;
+  align-items: flex-end;
 
   @media (max-width: 1200px) {
     display: none;

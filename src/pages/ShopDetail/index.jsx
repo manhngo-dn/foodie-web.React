@@ -14,6 +14,7 @@ import {
   Input,
   Rate,
   Card,
+  Avatar,
   notification,
 } from "antd";
 import {
@@ -171,10 +172,9 @@ const ShopDetail = () => {
     return commentList.data.map((commentItem, commentIndex) => {
       return (
         <S.CommentContainer key={commentItem.id}>
-          <Space align="baseline" size="large">
-            <S.UserNameComment>
-              <UserOutlined /> {commentItem.user?.fullName}
-            </S.UserNameComment>
+          <Space align="baseline" size={16}>
+            <Avatar icon={<UserOutlined />} />
+            <S.UserNameComment>{commentItem.user?.fullName}</S.UserNameComment>
             <S.CommentTime>
               {moment(commentItem.createdAt).fromNow()}
             </S.CommentTime>
@@ -329,7 +329,7 @@ const ShopDetail = () => {
             width={500}
             visible={isCommentModalShow}
             onCancel={() => setIsCommentModalShow(false)}
-            bodyStyle={{ maxHeight: "400px", overflowX: "scroll" }}
+            bodyStyle={{ maxHeight: "400px", overflowY: "auto" }}
             footer={
               <Form
                 form={commentForm}
