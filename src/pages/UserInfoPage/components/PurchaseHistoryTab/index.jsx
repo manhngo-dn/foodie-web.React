@@ -15,7 +15,6 @@ const PurchaseHistoryTab = (activeKey) => {
 
   const { userInfo } = useSelector((state) => state.userReducer);
   const { purchaseList } = useSelector((state) => state.purchaseReducer);
-  console.log(purchaseList.data);
 
   useEffect(() => {
     dispatch(

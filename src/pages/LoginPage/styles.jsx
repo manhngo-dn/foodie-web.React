@@ -8,7 +8,6 @@ export const LoginPageContent = styled.div`
 
 export const LoginForm = styled.div`
   padding: 20px;
-  max-width: 400px;
   width: 100%;
   background-color: #fff;
 `;

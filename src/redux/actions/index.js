@@ -9,3 +9,4 @@ export * from "./location.action";
 export * from "./purchase.action";
 export * from "./comment.action";
 export * from "./favorite.action";
+export * from "./common.action";

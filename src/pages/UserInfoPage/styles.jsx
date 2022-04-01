@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: calc(100% - 40px);
-  margin: 20px auto;
-  padding: 20px;
+  min-height: calc(100% - 40px);
+  margin: 16px auto;
+  padding: 16px;
 
   box-sizing: border-box;
   background-color: #fff;
@@ -21,9 +21,13 @@ export const NavigationProfile = styled.div`
 `;
 
 export const UserName = styled.div`
-  font-size: 18px;
-  font-weight: 700;
   padding: 20px;
+
+  & h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
 `;
 
 export const DetailContainer = styled.div`
@@ -39,7 +43,7 @@ export const HeadingText = styled.div`
   width: 100%;
   font-size: 18px;
   font-weight: 700;
-  padding: 20px;
+  padding: 16px;
   background-color: #f5f5f5;
   border: 1px solid #ebebeb;
 `;

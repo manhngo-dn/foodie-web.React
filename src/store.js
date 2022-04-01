@@ -12,6 +12,7 @@ import locationReducer from "./redux/reducers/location.reducer";
 import purchaseReducer from "./redux/reducers/purchase.reducer";
 import commentReducer from "./redux/reducers/comment.reducer";
 import favoriteReducer from "./redux/reducers/favorite.reducer";
+import commonReducer from "./redux/reducers/common.reducer";
 import rootSaga from "./redux/sagas";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -30,6 +31,7 @@ const store = configureStore({
     purchaseReducer,
     commentReducer,
     favoriteReducer,
+    commonReducer,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({ thunk: false }),
