@@ -11,6 +11,7 @@ import {
 } from "../../redux/actions";
 import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
+import Credit from "../../layouts/Credit";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -152,6 +153,7 @@ const Home = () => {
         </S.AppContent>
       </S.AppContainer>
       <Footer />
+      <Credit />
     </S.Wrapper>
   );
 };
