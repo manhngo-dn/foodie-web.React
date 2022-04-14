@@ -14,7 +14,7 @@ export const MainContainer = styled.div`
 export const MainBanner = styled.div`
   width: 100%;
   height: calc(100vh - 70px);
-  background-image: url("http://localhost:3000/main-banner.jpg");
+  background-image: url("main-banner.jpg");
   background-size: cover;
 `;
 

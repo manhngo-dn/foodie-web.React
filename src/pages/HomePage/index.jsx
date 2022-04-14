@@ -127,10 +127,7 @@ const Home = () => {
         <S.DeliveryContent>
           Foodie sẽ bảo quản đơn của bạn bằng túi & thùng để chống nắng mưa, giữ
           nhiệt... trên đường đi một cách tốt nhất.
-          <S.DeliveryImage
-            alt="delivery"
-            src="http://localhost:3000/delivery-image.png"
-          />
+          <S.DeliveryImage alt="delivery" src="delivery-image.png" />
         </S.DeliveryContent>
       </S.DeliveryContainer>
 
